@@ -170,6 +170,11 @@
 }
 
 @media screen and (max-width:575px){
+  .site-header .container {
+        padding: 10px 20px;
+        justify-content: center;
+    }
+
     .footer-links {
         text-align: left;
         width: 100%;
@@ -181,5 +186,15 @@
 
     .footer-bottom {
         margin-top: 40px;
+    }
+    .location-card {
+        padding: 25px;
+    }
+    .regional-card {
+        padding: 25px;
+    }
+    .circle-outer {
+        width: 320px;
+        height: 320px;
     }
 }

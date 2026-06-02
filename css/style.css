@@ -307,6 +307,8 @@ li.site-logo.desktop-logo {
 
 .explore-btn a span {
     margin-left: -15px;
+    font-size: 14px;
+    font-family: var(--font-bri);
 }
 
 .explore-btn a img {
@@ -363,7 +365,7 @@ li.site-logo.desktop-logo {
 }
 
 .banner-content h1 {
-    font-size: clamp(40px,6vw,75px);
+    font-size: clamp(36px,6vw,75px);
     font-weight: 600;
     color: var(--light-text);
     margin-bottom: 20px;
@@ -375,8 +377,8 @@ li.site-logo.desktop-logo {
     color: var(--light-text);
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    font-size: clamp(26px,3vw,37px);
-    line-height: 45px;
+    font-size: clamp(24px,3vw,37px);
+    line-height: 1.2;
     margin: 0;
     width: 100%;
     max-width: 500px;
