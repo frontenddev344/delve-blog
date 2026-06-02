@@ -197,4 +197,7 @@
         width: 320px;
         height: 320px;
     }
+    .contact-page {
+        padding: 40px 0 40px;
+    }
 }
