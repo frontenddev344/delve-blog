@@ -1,28 +1,87 @@
-@media(max-width:991px){
-
-    h1{
-        font-size:40px;
+@media screen and (max-width:1200px) {
+    .site-banner-warp .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .journey-wrapper {
+        width: 500px;
+        height: 500px;
     }
 
-    .journey-wrapper{
-        width:100%;
-        height:auto;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        gap:20px;
+     .circle-inner {
+        width: 369px;
+        height: 369px;
     }
+    .left-bottom {
+        left: -200px;
+        bottom: 140px;
+    }
+    .left-top {
+        left: -200px;
+        top: 140px;
+    }
+    .left-top {
+        left: -200px;
+        top: 140px;
+    }
+
+    .right-top {
+        right: -200px;
+        top: 140px;
+    }
+
+    .right-bottom {
+        right: -200px;
+        bottom: 140px;
+    }
+
+    .circle-outer {
+        width: 666px;
+        height: 666px;
+    }
+    .circle-middle {
+        width: 505px;
+        height: 505px;
+    }
+}
+
+@media screen and (max-width:991px){
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+
+    .banner-content {
+        padding: 40px 20px; 
+    }
+.journey-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+}
 
     .circle-outer,
     .info-card{
         position:static;
         transform:none;
+        width: 100%;
     }
 
-    .circle-outer{
-        width:350px;
-        height:350px;
-    }
+.circle-outer {
+    width: 350px;
+    height: 350px;
+    grid-column: 1/-1;
+    margin-top: 60px;
+    margin-inline: auto;
+}
 
     .circle-middle{
         width:280px;
@@ -37,5 +96,44 @@
     .search-box{
         width:100%;
         max-width:520px;
+    }
+
+     .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-form-card .row{
+        grid-template-columns:1fr;
+        gap: 0;
+    }
+
+    .page-heading h1{
+        font-size:48px;
+    }
+
+    .page-heading p{
+        font-size:18px;
+    }
+
+
+    .map-card{
+        position:static;
+        margin-top:20px;
+    }
+    .dot {
+        display: none;
+    }
+   
+}
+
+@media screen and (max-width:768px){
+    .site-banner-warp .grid .item:nth-child(2) {
+        grid-area: 1;
+    }
+    .site-banner-warp .grid {
+        grid-template-columns: 100%;
+    }
+    .contact-form-card {
+        padding: 40px 20px;
     }
 }
