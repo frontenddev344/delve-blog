@@ -2,17 +2,18 @@
     .site-banner-warp .grid {
         grid-template-columns: 1fr 1fr;
     }
-    .journey-wrapper {
-        width: 500px;
-        height: 500px;
-    }
+  .journey-wrapper {
+    width: 500px;
+    height: 500px;
+    margin: 250px auto;
+}
 
      .circle-inner {
         width: 369px;
         height: 369px;
     }
     .left-bottom {
-        left: -200px;
+        left: -203px;
         bottom: 140px;
     }
     .left-top {
@@ -20,17 +21,17 @@
         top: 140px;
     }
     .left-top {
-        left: -200px;
+        left: -193px;
         top: 140px;
     }
 
     .right-top {
-        right: -200px;
+        right: -193px;
         top: 140px;
     }
 
     .right-bottom {
-        right: -200px;
+        right: -203px;
         bottom: 140px;
     }
 
@@ -41,6 +42,14 @@
     .circle-middle {
         width: 505px;
         height: 505px;
+    }
+    .top-card {
+        left: 50%;
+        top: -175px;
+    }
+    .bottom-card {
+        left: 50%;
+        bottom: -175px;
     }
 }
 
@@ -100,6 +109,7 @@
 
      .contact-grid{
         grid-template-columns:1fr;
+        margin: 40px 0;
     }
 
     .contact-form-card .row{
@@ -107,9 +117,6 @@
         gap: 0;
     }
 
-    .page-heading h1{
-        font-size:48px;
-    }
 
     .page-heading p{
         font-size:18px;
@@ -123,6 +130,21 @@
     .dot {
         display: none;
     }
+
+    .journey-wrapper {
+        margin: 40px auto;
+    }
+
+    .contact-page h1 {
+        line-height: normal;
+    }
+    .breadcrumb {
+        margin-bottom: 20px;
+    }
+    
+    .submit-btn {
+        padding: 12px 25px;
+    }
    
 }
 
@@ -135,5 +157,29 @@
     }
     .contact-form-card {
         padding: 40px 20px;
+    }
+    .delveburt-section {
+        padding: 40px 0;
+    }
+    .how-we-got {
+        padding: 40px 0;
+    }
+    .solution {
+        padding: 40px 0;
+    }
+}
+
+@media screen and (max-width:575px){
+    .footer-links {
+        text-align: left;
+        width: 100%;
+    }
+    .footer-features {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
     }
 }
