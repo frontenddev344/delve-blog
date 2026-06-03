@@ -243,6 +243,23 @@
     .newsletter-content p {
         font-size: 18px;
     }
+    .hub-columns {
+        grid-template-columns: 100%;
+    }
+    .handshake-icon {
+        width: 60px;
+        height: 60px;
+    }
+    .handshake-icon img {
+        width: auto;
+    }
+    .handshake-btn {
+        font-size: 16px;
+        padding: 12px 22px 12px 22px;
+    }
+    .column-heading h3 {
+        font-size: 24px;
+    }
 }
 
 @media screen and (max-width:575px){
@@ -282,5 +299,16 @@
 
     .core-values {
         padding: 40px 0;
+    }
+    .handshake-content {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
+    }
+    .handshake-text h3 {
+        font-size: 20px;
+    }
+     .column-heading h3 {
+        font-size: 22px;
     }
 }
