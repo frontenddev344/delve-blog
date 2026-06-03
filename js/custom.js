@@ -35,7 +35,7 @@ gsap.from(".mind-img img", {
   scrollTrigger: {
     trigger: ".mind-img",
     start: "top 80%",
-    end: "top 40%",
+    end: "top 30%",
     scrub: true,
     // markers: true
   }
