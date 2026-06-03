@@ -196,6 +196,18 @@
     .core-values {
         padding: 60px 0;
     }
+
+     .section-heading h1 {
+        font-size: 52px;
+    }
+
+    .selector-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gateway-banner img {
+        height: 300px;
+    }
    
 }
 
@@ -259,6 +271,41 @@
     }
     .column-heading h3 {
         font-size: 24px;
+    }
+
+     .delve-selector {
+        padding: 60px 0;
+    }
+
+    .section-heading h1 {
+        font-size: 40px;
+    }
+
+    .section-heading p {
+        font-size: 18px;
+    }
+
+    .selector-card h3 {
+        font-size: 24px;
+    }
+
+    .selector-card li {
+        font-size: 16px;
+        padding: 16px;
+    }
+
+    .gateway-content {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .gateway-content h2 {
+        font-size: 28px;
+    }
+
+    .gateway-content p {
+        font-size: 16px;
     }
 }
 
