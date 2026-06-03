@@ -14,8 +14,8 @@ $(document).ready(function(){
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".solution-content", {
-  y: 200,
-  opacity: 0,
+  y: 100,
+  opacity: 0.5,
   ease: "none",
   scrollTrigger: {
     trigger: ".solution-content",
