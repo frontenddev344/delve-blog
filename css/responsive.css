@@ -145,6 +145,57 @@
     .submit-btn {
         padding: 12px 25px;
     }
+
+      .hero-content h1 {
+        font-size: 56px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .about-banner img {
+        height: 500px;
+    }
+
+    .deep-reading-wrapper {
+        grid-template-columns: 100%;
+    }
+
+    .reading-content,
+    .reading-cards {
+        width: 100%;
+    }
+
+    .reading-cards {
+        margin-top: 30px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .newsletter-content h2 {
+        font-size: 42px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+    }
+    .core-values {
+        padding: 60px 0;
+    }
    
 }
 
@@ -166,6 +217,31 @@
     }
     .solution {
         padding: 40px 0;
+    }
+
+     .about-hero {
+        padding: 50px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .reading-content h2,
+    .section-title h2 {
+        font-size: 36px;
+    }
+
+    .reading-card {
+        min-height: 220px;
+    }
+
+    .newsletter-content h2 {
+        font-size: 34px;
+    }
+
+    .newsletter-content p {
+        font-size: 18px;
     }
 }
 
@@ -202,5 +278,9 @@
     }
     .social-icons a {
         font-size: 22px;
+    }
+
+    .core-values {
+        padding: 40px 0;
     }
 }
