@@ -187,6 +187,7 @@ p {
 .site-header {
     background: #FAF8F3;
     position: relative;
+    padding: 10px;
 }
 
 header.dark-header {
@@ -200,6 +201,10 @@ header.dark-header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+}
+
+.site-header .explore-btn {
+    display: none;
 }
 
 /* .desktop-menu {
@@ -1914,3 +1919,229 @@ body.about-page {
     font-weight: 400;
     margin: 0;
 }
+
+
+/* delvettes page start  */
+
+.delvettes-page .container:not(.site-header .container) {
+    max-width: 1280px;
+}
+
+.delvettes-page{
+    background:#f5f2ed;
+}
+
+.delvettes-sec {
+    padding: 80px 0;
+}
+
+/* Tabs */
+
+.delvettes-sec ul.nav {
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.delvettes-tabs .nav-link{
+    border:1px solid #cfd3d8;
+    border-radius:30px;
+    color:#555;
+    background:none;
+    padding:10px 20px;
+    font-size:14px;
+}
+
+.delvettes-tabs .nav-link.active{
+    background: var(--theme-clr);
+    border-color:var(--theme-clr);
+}
+
+/* Hero */
+
+.hero-strip {
+    color: #fff;
+    padding: 60px 0;
+    margin-bottom: 40px;
+    background: var(--theme-clr);
+}
+
+.hero-strip h1 {
+    font-size: clamp(32px, 6vw,48px);
+    line-height: 64px;
+    letter-spacing: -1.12px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #faf8f3;
+    font-family: var(--font-bri);
+}
+
+.hero-strip p {
+    font-size: 20px;
+    max-width: 950px;
+    color: #faf8f3;
+    font-family: var(--font-bri);
+}
+
+/* Grid */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Featured */
+
+.featured-card{
+    display:flex;
+    border:1px solid #d6d0c7;
+    background:#f2ebe2;
+    grid-column: span 2;
+}
+
+.featured-img{
+    width:50%;
+    position:relative;
+}
+
+.featured-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.time-tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    border-style: solid;
+    border-color: #c0c8c9;
+    border-width: 1px;
+    padding: 4px 12px 4px 12px;
+    font-family: var(--font-bri);
+}
+
+.featured-content .category {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.featured-content{
+    width:50%;
+    padding:24px;
+}
+
+.featured-content h2 {
+    font-size: 32px;
+    margin: 20px 0;
+    font-family: var(--font-bri);
+    color: #000;
+}
+
+.featured-content a {
+    color: #002428;
+    text-align: left;
+    font-family: var(--font-bri);
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.28px;
+    font-weight: 400;
+}
+
+.blog-card{
+    border:1px solid #d6d0c7;
+    background:#f2ebe2;
+}
+
+.blog-card .card-meta span {
+    color: #000000;
+    text-align: left;
+    font-family: var(--font-bri);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.blog-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-meta{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+}
+
+.card-meta small {
+    background:var(--theme-clr);
+    color: #fff;
+    padding: 2px 8px;
+    font-size: 10px;
+    font-family: var(--font-bri);
+    line-height: 20px;
+}
+
+.blog-card .card-content h3 {
+    color: #000000;
+    text-align: left;
+    font-family:var(--font-bri);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+.blog-card .card-content p {
+    color: #000000;
+    text-align: left;
+    font-family:var(--font-bri);
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.28px;
+    font-weight: 400;
+}
+
+/* Highlight */
+
+.highlight-card{
+    background:#9b6338;
+    color:#fff;
+    padding:30px;
+}
+
+.highlight-card hr{
+    opacity:1;
+}
+
+/* Load More */
+
+.load-more-wrap{
+    text-align:center;
+    margin-top:60px;
+}
+
+.load-btn{
+    background:#07152f;
+    color:#fff;
+    border:none;
+    padding:15px 40px;
+    border-radius:6px;
+}
+
+.load-more-wrap p{
+    margin-top:15px;
+}
+
+/* delettes page end  */

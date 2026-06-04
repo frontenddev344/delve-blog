@@ -221,6 +221,28 @@
     .gateway-banner img {
         height: 300px;
     }
+
+      .card-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .featured-card {
+        flex-direction: column;
+        grid-column: 1/-1;
+    }
+
+    .featured-img,
+    .featured-content{
+        width:100%;
+    }
+
+    .hero-strip h1{
+        font-size:42px;
+    }
+
+    .featured-content h2{
+        font-size:34px;
+    }
    
 }
 
@@ -375,5 +397,9 @@
     }
      .column-heading h3 {
         font-size: 22px;
+    }
+
+    .card-grid {
+        grid-template-columns: 100%;
     }
 }
