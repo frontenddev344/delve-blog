@@ -236,9 +236,6 @@
         width:100%;
     }
 
-    .hero-strip h1{
-        font-size:42px;
-    }
 
     .featured-content h2{
         font-size:34px;
@@ -401,5 +398,9 @@
 
     .card-grid {
         grid-template-columns: 100%;
+    }
+
+    .hero-strip p {
+        font-size: 18px;
     }
 }

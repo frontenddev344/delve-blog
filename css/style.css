@@ -1967,7 +1967,7 @@ body.about-page {
 
 .hero-strip h1 {
     font-size: clamp(32px, 6vw,48px);
-    line-height: 64px;
+    line-height: 1.5;
     letter-spacing: -1.12px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -2115,14 +2115,19 @@ body.about-page {
 
 /* Highlight */
 
-.highlight-card{
-    background:#9b6338;
-    color:#fff;
-    padding:30px;
+.highlight-card {
+    background: var(--theme-clr);
+    color: #fff;
+    padding: 24px;
 }
 
 .highlight-card hr{
     opacity:1;
+}
+
+.highlight-card .card-meta small {
+    background: #fff;
+    color: #000;
 }
 
 /* Load More */
@@ -2132,12 +2137,17 @@ body.about-page {
     margin-top:60px;
 }
 
-.load-btn{
-    background:#07152f;
-    color:#fff;
-    border:none;
-    padding:15px 40px;
-    border-radius:6px;
+.load-btn {
+    background: #07152f;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 6px;
+    transition: all 0.2s linear;
+}
+
+.load-btn:hover {
+    background: var(--theme-clr);
 }
 
 .load-more-wrap p{
