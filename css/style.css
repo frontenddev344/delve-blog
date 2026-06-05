@@ -2318,10 +2318,12 @@ body.about-page {
     background:#fff;
 }
 
-.pricing-section h2{
-    text-align:center;
-    font-size:48px;
-    margin-bottom:60px;
+.pricing-section h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: clamp(32px, 6vw, 48px);
+    line-height: 1.5;
+    letter-spacing: -1.12px;
 }
 
 .pricing-section p {
@@ -2342,6 +2344,218 @@ body.about-page {
     font-size: 26px;
     line-height: 1.2;
     width: 100%;
+}
+
+
+/* new html for this page  */
+
+.membership-explainer{
+    padding:120px 0;
+    background:#f5f1eb;
+}
+
+.content-card{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    padding:70px;
+    border-radius:24px;
+    box-shadow:0 25px 60px rgba(0,0,0,.05);
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-heading span{
+    color:#9b6238;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.section-heading h2 {
+    color: #071224;
+    font-size: clamp(32px, 6vw, 48px);
+}
+
+.membership-explainer .section-heading span {
+    text-transform: capitalize;
+}
+.content-card h3{
+    color:#9b6238;
+    font-size:34px;
+    margin-bottom:30px;
+}
+
+.reasons p{
+    margin-bottom:24px;
+    padding-left:28px;
+    position:relative;
+}
+
+.reasons p:before{
+    content:"";
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#9b6238;
+    position:absolute;
+    left:0;
+    top:14px;
+}
+
+.result-box{
+    margin-top:50px;
+    padding:40px;
+    background:#faf7f3;
+}
+
+blockquote{
+    font-size:36px;
+    color:#9b6238;
+    font-style:italic;
+    margin-top:15px;
+}
+
+.final-box {
+    margin-top: 40px;
+    text-align: center;
+    background: #071224;
+    color: #fff;
+    padding: 18px 20px;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.2s linear;
+}
+
+/* 
+.final-box:hover{
+    background: var(--theme-clr);
+    color: #fff;
+} */
+/* new css above  */
+
+.premium-membership{
+    background:var(--cream);
+    padding:100px 0;
+}
+
+.premium-content{
+    max-width:850px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.premium-content h1{
+    font-size:60px;
+    line-height:1.15;
+    font-weight:700;
+    color:var(--navy);
+    margin-bottom:20px;
+}
+
+.price{
+    font-size:28px;
+    font-weight:600;
+    color:var(--brown);
+    margin-bottom:70px;
+}
+
+.premium-content h2{
+    font-size:42px;
+    color:var(--navy);
+    margin-bottom:40px;
+}
+
+.premium-content p{
+    font-size:20px;
+    line-height:1.9;
+    color:var(--text);
+    margin-bottom:24px;
+}
+
+.highlight{
+    font-size:26px;
+    font-weight:600;
+    color:var(--brown);
+    margin:40px 0;
+}
+
+.result-label{
+    font-size:22px;
+    font-weight:600;
+    color:var(--navy);
+    margin-top:50px;
+}
+
+blockquote{
+    border-left:4px solid var(--brown);
+    padding:20px 0 20px 30px;
+    margin:35px auto;
+    text-align:left;
+    max-width:700px;
+
+    font-size:32px;
+    line-height:1.5;
+    font-style:italic;
+    color:var(--brown);
+}
+
+.final-statement{
+    font-size:30px;
+    font-weight:700;
+    color:var(--navy);
+    margin-top:40px;
+}
+
+@media(max-width:991px){
+
+    .premium-content h1{
+        font-size:46px;
+    }
+
+    .premium-content h2{
+        font-size:34px;
+    }
+
+    .premium-content p{
+        font-size:18px;
+    }
+
+    blockquote{
+        font-size:26px;
+    }
+
+    .final-statement{
+        font-size:24px;
+    }
+}
+
+@media(max-width:767px){
+
+    .premium-membership{
+        padding:70px 0;
+    }
+
+    .premium-content h1{
+        font-size:36px;
+    }
+
+    .price{
+        font-size:22px;
+        margin-bottom:50px;
+    }
+
+    .premium-content h2{
+        font-size:28px;
+    }
+
+    blockquote{
+        font-size:22px;
+        padding-left:20px;
+    }
 }
 
 /* handshake page start   */
@@ -2488,7 +2702,7 @@ body.about-page {
     padding:80px 0 100px;
 }
 
-.section-title{
+.process-section .section-title{
     display:flex;
     justify-content:center;
     align-items:center;
@@ -2496,7 +2710,7 @@ body.about-page {
     margin-bottom:25px;
 }
 
-.section-title span{
+.process-section .section-title span{
     width:90px;
     height:1px;
     background:#999;
