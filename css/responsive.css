@@ -249,6 +249,14 @@
         flex-direction: row;
         align-items: center;
     }
+    .summary-item {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .summary-item strong {
+        text-align: center;
+    }
    
 }
 
@@ -424,5 +432,14 @@
 
     .hero-strip p {
         font-size: 18px;
+    }
+
+    .handshake-hero {
+        min-height: 500px;
+    }
+
+    .summary-box {
+        gap: 20px;
+        max-width: 100%;
     }
 }
