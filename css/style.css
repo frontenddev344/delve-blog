@@ -529,6 +529,7 @@ li.site-logo.desktop-logo {
     width: 700px;
     height: 700px;
     margin: 180px auto;
+    display: none;
 }
 
 .circle-outer {
@@ -2738,7 +2739,7 @@ body.about-page {
         font-size: 18px;
         padding: 14px 20px;
     }
-    
+
     .process-section {
         padding: 60px 0;
     }

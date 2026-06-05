@@ -442,4 +442,13 @@
         gap: 20px;
         max-width: 100%;
     }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+        line-height: 1.7;
+    }
 }
