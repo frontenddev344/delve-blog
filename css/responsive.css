@@ -258,6 +258,11 @@
         text-align: center;
     }
    
+    .content-card {
+        padding: 30px 30px;
+        border-radius: 24px;
+        box-shadow: 0 25px 60px rgba(0,0,0,.05);
+    }
 }
 
 @media screen and (max-width:768px){
@@ -374,6 +379,29 @@
         width:90%;
         padding:25px;
     }
+
+   .result-box blockquote {
+    font-size: 22px;
+    margin-bottom: 0;
+}
+    .result-box {
+        margin-top: 50px;
+        padding: 20px 20px;
+    }
+    .reasons p {
+        padding-left: 28px;
+    }
+
+    .content-card h3 {
+        color: #9b6238;
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .membership-explainer {
+        padding: 40px 0;
+        background: #f5f1eb;
+    }
 }
 
 @media screen and (max-width:575px){
@@ -450,5 +478,15 @@
     .hero-content h1 {
         font-size: 32px;
         line-height: 1.7;
+    }
+
+    .result-box blockquote {
+        font-size: 18px;
+        margin-bottom: 0;
+        padding: 12px;
+        border-width: 2px;
+    }
+    .final-box {
+        font-size: 16px;
     }
 }
