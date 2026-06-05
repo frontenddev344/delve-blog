@@ -787,6 +787,7 @@ li.site-logo.desktop-logo {
     margin-top: 8px;
     font-size: 14px;
     color: #000;
+    display: none;
 }
 
 .footer-links{
