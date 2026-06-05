@@ -505,6 +505,7 @@ li.site-logo.desktop-logo {
     padding: 80px 0;
     color: #fff;
     position: relative;
+    display: none;
 }
 
 .section-title {
