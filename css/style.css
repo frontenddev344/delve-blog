@@ -2382,6 +2382,29 @@ body.about-page {
 .membership-explainer .section-heading span {
     text-transform: capitalize;
 }
+
+.membership-explainer h1 {
+    margin-bottom: 20px;
+    font-size: clamp(32px, 6vw,48px);
+    letter-spacing: -0.96px;
+    font-weight: 700;
+    color: #002428;
+    line-height: 1.2;
+    font-family: var(--font-bri);
+    text-align: center;
+}
+
+.membership-explainer h1 span {
+    color: var(--theme-clr);
+}
+
+.membership-explainer h4 {
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 2px solid #89532f;
+    max-width: max-content;
+    margin: 0 auto 20px;
+}
 .content-card h3{
     color:#9b6238;
     font-size:34px;
@@ -2411,11 +2434,12 @@ body.about-page {
     background:#faf7f3;
 }
 
-blockquote{
-    font-size:36px;
+.result-box blockquote{
+    font-size:28px;
     color:#9b6238;
-    font-style:italic;
+    font-style:normal;
     margin-top:15px;
+    line-height: 1.4;
 }
 
 .final-box {
