@@ -388,10 +388,10 @@
         margin-top: 50px;
         padding: 20px 20px;
     }
-    .reasons p {
-        padding-left: 28px;
-    }
-
+   .reasons p {
+    padding-left: 28px;
+    margin-bottom: 14px;
+}
     .content-card h3 {
         color: #9b6238;
         font-size: 26px;
