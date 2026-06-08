@@ -1928,6 +1928,25 @@ body.about-page {
     margin: 0;
 }
 
+.delve-copy {
+    padding: 40px 0;
+}
+
+.delve-copy p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.delve-copy .grid {
+    gap: 24px;
+}
+
+.delve-copy .item {
+    padding: 24px;
+    border: 1px solid #c0c8c9;
+    border-radius: 8px;
+    background: #ffffffbd;
+}
 
 /* delvettes page start  */
 
@@ -2678,3 +2697,4 @@ blockquote{
     background:#111827;
     color: #fff;
 }
+
