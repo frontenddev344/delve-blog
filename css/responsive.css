@@ -604,6 +604,7 @@
   .site-header .container {
         padding: 10px 20px;
         justify-content: center;
+        gap:10px;
     }
 
     .footer-links {

@@ -3530,3 +3530,13 @@ body.deeper-delves-page {
 .terms-policy-page a:hover {
     color: #093c55;
 }
+
+
+/* search  */
+
+.search-bar input[type="search"] {
+    height: 40px;
+    padding: 15px;
+    border-radius: 4px;
+    border: 0;
+}
