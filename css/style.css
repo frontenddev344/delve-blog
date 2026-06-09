@@ -1402,6 +1402,19 @@ body.about-page {
     margin-bottom: 48px;
 }
 
+.core-values .section-title h2 {
+    font-size: 32px;
+    color: #000;
+}
+
+.core-values .section-title span {
+    font-size: 14px;
+    color: #414849;
+    letter-spacing: 0.28px;
+    font-weight: 400;
+    font-style: italic;
+}
+
 .section-title h2 {
     margin: 0;
     font-size: 32px;
@@ -3146,12 +3159,17 @@ body.deeper-delves-page {
     color: #000;
 }
 
-.deeper-delves-page .hero-btn{
-    display:inline-block;
-    background:#000;
-    color:#fff;
-    padding:16px 28px;
-    text-decoration:none;
+.deeper-delves-page .hero-btn {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 16px 28px;
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+
+.deeper-delves-page .hero-btn:hover {
+    background: var(--theme-clr);
 }
 
 .deeper-delves-page .article-grid {
@@ -3263,6 +3281,12 @@ body.deeper-delves-page {
     color: #000;
     text-decoration: none;
     line-height: 1;
+    transition: all 0.2s linear;
+}
+
+.deeper-delves-page .minutes-box a:hover {
+    background: #000;
+    color:#fff;
 }
 
 .newsletter-icon {
