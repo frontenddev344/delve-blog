@@ -3515,10 +3515,11 @@ body.deeper-delves-page {
     top: 12px;
 }
 
-.terms-policy-page ul li strong,
-.terms-policy-page ul li b {
-    color: #093c55;
+.terms-policy-page ul li strong, .terms-policy-page ul li b {
+    color: var(--black);
     font-weight: 600;
+    display: block;
+    font-size: 24px;
 }
 
 .terms-policy-page a {
@@ -3532,6 +3533,20 @@ body.deeper-delves-page {
 }
 
 
+.terms-policy-page h2 {
+    display: block;
+    position: relative;
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 18px;
+}
+
+.terms-policy-page h4 {
+    font-size: 24px;
+    margin: 20px 0 0;
+}
 /* search  */
 
 .search-bar input[type="search"] {
