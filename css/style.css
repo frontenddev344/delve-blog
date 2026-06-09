@@ -3418,10 +3418,18 @@ body.deeper-delves-page {
     line-height:1.8;
     max-width:800px;
     color:#d5d5d5;
+    margin: 0;
 }
+
 
 .level-card p strong {
     color: var(--theme-clr);
+}
+
+.level-card p a {
+    text-decoration: underline;
+    color: var(--theme-clr);
+    display: inline;
 }
 
 @media(max-width:991px){
