@@ -3539,4 +3539,6 @@ body.deeper-delves-page {
     padding: 15px;
     border-radius: 4px;
     border: 0;
+    width: 100%;
+    max-width: 220px;
 }
