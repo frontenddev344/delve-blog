@@ -233,6 +233,94 @@
         </section>
 
 
+        <section class="delve-elevator">
+    <div class="container">
+
+        <div class="elevator-progress">
+            <div class="progress-line"></div>
+
+            <div class="level-dot active" data-level="1">
+                <span>1</span>
+            </div>
+
+            <div class="level-dot" data-level="2">
+                <span>2</span>
+            </div>
+
+            <div class="level-dot" data-level="3">
+                <span>3</span>
+            </div>
+
+            <div class="level-dot" data-level="4">
+                <span>4</span>
+            </div>
+
+            <div class="level-dot" data-level="5">
+                <span>5</span>
+            </div>
+
+            <div class="level-dot" data-level="6">
+                <span>6</span>
+            </div>
+        </div>
+
+        <div class="levels-content">
+
+            <article class="level-card" data-level="1">
+                <div class="level-tag">LEVEL 1</div>
+                <h2>Welcome, New Visitors</h2>
+                 <p>If you’re <strong>new to DelveBlog</strong> , welcome. We built this site to help you find your way quickly,
+                            think more clearly, and explore useful ideas without fighting clutter, pop-ups, or
+                            in-your-face advertising.</p>
+            </article>
+
+            <article class="level-card" data-level="2">
+                <div class="level-tag">LEVEL 2</div>
+                <h2>For our Regulars</h2>
+                <p>If you’re a <strong>regular visitor</strong> , welcome back. Something here has already caught your attention,
+                            and we’re glad it did. Whether you prefer a quick Delvette, a fuller Delve, or a more
+                            expansive Deeper Delve, we hope each visit gives you something worth thinking about.</p>
+            </article>
+
+            <article class="level-card" data-level="3">
+                <div class="level-tag">LEVEL 3</div>
+                <h2>Our Community</h2>
+               <p>If you’re a <strong>free registered member</strong> , thank you for joining us. You’ll receive simple
+                            notifications when new topics go live, including the title and abstract, so you can decide
+                            what interests you without being buried in marketing noise.</p>
+            </article>
+
+            <article class="level-card" data-level="4">
+                <div class="level-tag">LEVEL 4</div>
+                <h2>Premium Support</h2>
+                <p>If you’re a <strong>paid Premium Member</strong> , thank you especially. Your support helps make DelveBlog
+                            possible. We’ll work hard to keep the membership affordable while continuing to create
+                            content that earns your trust and attention.</p>
+            </article>
+
+            <article class="level-card" data-level="5">
+                <div class="level-tag">LEVEL 5</div>
+                <h2>The AI Beginner</h2>
+                <p>If you’re an <strong>AI Beginner</strong> , you’re one of the main reasons DelveBlog exists. You may still be
+                            learning what AI can do and how it can help you. Our content is designed not only to explore
+                            ideas, but also to model how ordinary people can use AI to think, learn, create, and solve
+                            problems.</p>
+            </article>
+
+            <article class="level-card" data-level="6">
+                <div class="level-tag">LEVEL 6</div>
+                <h2>AI Familiar</h2>
+               <p>If you’re <strong>AI Familiar</strong> , you’re already ahead of the curve. DelveBlog is here to help you move
+                            beyond basic AI use toward sharper questions, clearer thinking, better judgment, and more
+                            capable human-AI collaboration.</p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
         <!-- Gateway Banner -->
         <section class="gateway-section">
 
@@ -311,6 +399,68 @@
     <script src="js/swiper.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/custom.js"></script>
+
+    <script>
+const cards = document.querySelectorAll(".level-card");
+const dots = document.querySelectorAll(".level-dot");
+
+function updateActiveCard() {
+
+    let currentCard = null;
+    let smallestDistance = Infinity;
+
+    cards.forEach(card => {
+
+        const rect = card.getBoundingClientRect();
+
+        const cardCenter = rect.top + rect.height / 2;
+        const viewportCenter = window.innerHeight / 2;
+
+        const distance = Math.abs(cardCenter - viewportCenter);
+
+        if (distance < smallestDistance) {
+            smallestDistance = distance;
+            currentCard = card;
+        }
+
+    });
+
+    if (!currentCard) return;
+
+    const activeLevel = currentCard.dataset.level;
+
+    cards.forEach(card => {
+        card.classList.remove("active");
+    });
+
+    dots.forEach(dot => {
+        dot.classList.remove("active");
+        dot.classList.remove("completed");
+    });
+
+    currentCard.classList.add("active");
+
+    dots.forEach(dot => {
+
+        const dotLevel = Number(dot.dataset.level);
+
+        if (dotLevel < activeLevel) {
+            dot.classList.add("completed");
+        }
+
+        if (dotLevel == activeLevel) {
+            dot.classList.add("active");
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", updateActiveCard);
+window.addEventListener("resize", updateActiveCard);
+
+updateActiveCard();
+    </script>
 </body>
 
 </html>
