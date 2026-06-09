@@ -3418,6 +3418,10 @@ body.deeper-delves-page {
     color:#d5d5d5;
 }
 
+.level-card p strong {
+    color: var(--theme-clr);
+}
+
 @media(max-width:991px){
 
     .delve-elevator .container{
