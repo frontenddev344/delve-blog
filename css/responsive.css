@@ -361,6 +361,10 @@
     .deeper-delves-sec {
         padding: 60px 0 0;
     }
+
+    .contact-grid-btm {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width:768px){
@@ -686,5 +690,9 @@
     }
     .deeper-delves-page .card-content h3 {
         font-size: 22px;
+    }
+
+     .contact-grid-btm {
+        grid-template-columns:100%;
     }
 }
