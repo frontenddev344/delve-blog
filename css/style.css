@@ -3446,3 +3446,87 @@ body.deeper-delves-page {
         font-size:38px;
     }
 }
+
+
+/* term policy page start   */
+
+.terms-policy-page {
+    padding: 100px 0;
+    background: #f8f6f2;
+}
+
+.terms-policy-page .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.terms-policy-page p {
+    margin: 0;
+}
+
+.terms-policy-page p b {
+    display: block;
+    position: relative;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #000;
+    margin: 70px 0 25px;
+    padding-bottom: 18px;
+}
+
+.terms-policy-page p:first-child b {
+    margin-top: 0;
+}
+
+.terms-policy-page p b::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 2px;
+    background: var(--theme-clr);
+}
+
+.terms-policy-page ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.terms-policy-page ul li {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4d4d4d;
+}
+
+.terms-policy-page ul li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--theme-clr);
+    position: absolute;
+    left: 0;
+    top: 12px;
+}
+
+.terms-policy-page ul li strong,
+.terms-policy-page ul li b {
+    color: #093c55;
+    font-weight: 600;
+}
+
+.terms-policy-page a {
+    color: var(--theme-clr);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.terms-policy-page a:hover {
+    color: #093c55;
+}

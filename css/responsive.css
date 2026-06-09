@@ -230,13 +230,13 @@
         grid-template-columns:1fr 1fr;
     }
 
-    .featured-card {
+    .delvettes-sec .featured-card{
         flex-direction: column;
         grid-column: 1/-1;
     }
 
-    .featured-img,
-    .featured-content{
+    .delvettes-sec .featured-img,
+    .delvettes-sec .featured-content{
         width:100%;
     }
 
@@ -578,6 +578,25 @@
 
     .deeper-delves-sec {
         padding: 40px 0 0;
+    }
+
+    .delvettes-sec {
+        padding: 40px 0;
+    }
+
+    .terms-policy-page {
+        padding: 50px 0;
+    }
+
+    .terms-policy-page p b {
+        font-size: 26px;
+        margin: 50px 0 20px;
+    }
+
+    .terms-policy-page ul li {
+        font-size: 16px;
+        line-height: 1.7;
+        padding-left: 24px;
     }
 }
 
