@@ -1178,6 +1178,10 @@ select {
     position:relative;
 }
 
+.map-section img {
+    width: 100%;
+}
+
 .map-icon img {
     height: auto;
     max-width: max-content;
@@ -1887,6 +1891,7 @@ body.about-page {
 
 .gateway-section {
     padding-bottom: 96px;
+    padding-top: 96px;
 }
 
 .gateway-banner {
