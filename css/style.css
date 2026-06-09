@@ -2794,7 +2794,7 @@ body.delves-page {
 
 .delves-sec .page-header p {
     width: 100%;
-    max-width: 540px;
+    max-width: 100%;
     color: #414849;
     font-family: var(--font-bri);
     font-size: 18px;
@@ -3134,7 +3134,7 @@ body.deeper-delves-page {
 
 .deeper-delves-sec .page-heading p {
     width: 100%;
-    max-width: 540px;
+    max-width: 100%;
     color: #414849;
     font-family: var(--font-bri);
     font-size: 18px;
@@ -3410,7 +3410,7 @@ body.deeper-delves-page {
 
 .level-card h2{
     font-size:58px;
-    margin-bottom:25px;
+    margin-bottom:15px;
 }
 
 .level-card p{
