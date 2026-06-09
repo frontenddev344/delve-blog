@@ -65,6 +65,10 @@
         left: 50%;
         bottom: -175px;
     }
+
+    .deeper-delves-page .hero-content {
+        padding: 24px;
+    }
 }
 
 @media screen and (max-width:991px){
@@ -326,6 +330,37 @@
         grid-template-columns: 100%;
         gap: 24px;
     }
+
+    .deeper-delves-page .hero-feature {
+        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .deeper-delves-page .hero-image img {
+        width: 100%;
+        display: block;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .deeper-delves-page .hero-content {
+        padding: 24px;
+        position: static;
+        transform: translateY(0);
+        width: 100%;
+        max-width: 100%;
+    }
+    .deeper-delves-page .bottom-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .newsletter-section {
+        padding: 60px 0;
+    }
+    .deeper-delves-sec {
+        padding: 60px 0 0;
+    }
 }
 
 @media screen and (max-width:768px){
@@ -511,6 +546,35 @@
     .process-section {
         padding: 60px 0;
     }
+
+    .deeper-delves-page .hero-feature {
+        grid-template-columns: 100%;
+    }
+
+    .deeper-delves-page .article-card.horizontal {
+        grid-template-columns: 100%;
+        grid-column: span 1;
+    }
+
+    .deeper-delves-page .article-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .deeper-delves-page .article-card.large {
+        grid-row: span 1;
+    }
+    .deeper-delves-page .article-card img {
+        height: 260px;
+        object-fit: cover;
+    }
+
+     .deeper-delves-page .bottom-grid {
+        grid-template-columns: 100%;
+    }
+
+    .deeper-delves-sec {
+        padding: 40px 0 0;
+    }
 }
 
 @media screen and (max-width:575px){
@@ -616,5 +680,11 @@
 
     .delve-copy .grid {
         gap: 20px;
+    }
+    .deeper-delves-page .article-grid {
+        grid-template-columns: 100%;
+    }
+    .deeper-delves-page .card-content h3 {
+        font-size: 22px;
     }
 }

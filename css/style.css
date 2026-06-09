@@ -1486,7 +1486,7 @@ body.about-page {
 .newsletter-content p {
     color: #fff;
     line-height: 1.6;
-    max-width: 670px;
+    max-width: 750px;
     margin: 0 auto 50px;
     font-size: 20px;
     font-weight: 400;
@@ -3058,6 +3058,9 @@ body.deeper-delves-page {
 .deeper-delves-page .container:not(.site-header .container) {
     max-width: 1280px;
 }
+.deeper-delves-sec {
+    padding: 80px 0 0;
+}
 
 .deeper-delves-page .hero-feature {
     position: relative;
@@ -3095,15 +3098,16 @@ body.deeper-delves-page {
     margin: 0;
 }
 
-.deeper-delves-page .hero-content{
-    position:absolute;
-    right:0;
-    top:50px;
-    width:46%;
-    background:#efe6db;
-    padding:50px;
-    border:1px solid var(--border);
+.deeper-delves-page .hero-content {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 46%;
+    background: #efe6db;
+    padding: 48px;
+    border: 1px solid var(--border);
     text-align: left;
+    transform: translateY(-50%);
 }
 
 .deeper-delves-page .meta-row{
@@ -3126,10 +3130,11 @@ body.deeper-delves-page {
 
 .deeper-delves-page .hero-content h2 {
     margin-bottom: 0;
-    font-size: 32px;
+    font-size: clamp(24px, 3vw, 32px);
     line-height: 40px;
     font-weight: 600;
     text-align: left;
+    color: #000;
 }
 
 .deeper-delves-page .hero-content p {
@@ -3150,10 +3155,12 @@ body.deeper-delves-page {
 }
 
 .deeper-delves-page .article-grid {
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 48px;
 }
+
 .deeper-delves-page .article-card {
     border: 1px solid var(--border);
     background: transparent;
@@ -3178,10 +3185,11 @@ body.deeper-delves-page {
     font-weight:600;
 }
 
-.deeper-delves-page .card-content h3{
-    font-size:26px;
-    line-height:1.3;
-    margin:15px 0;
+.deeper-delves-page .card-content h3 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin: 15px 0;
+    font-family: var(--font-bri);
 }
 
 .deeper-delves-page .card-content p{
@@ -3197,6 +3205,9 @@ body.deeper-delves-page {
 }
 
 
+.deep-bottom-content {
+    padding: 48px 0;
+}
 
 .deeper-delves-page .bottom-content{
     padding:80px 0;
@@ -3214,23 +3225,30 @@ body.deeper-delves-page {
     grid-column: span 2;
 }
 
-.deeper-delves-page .themes-box h3,
-.deeper-delves-page .minutes-box h3{
-    font-size:36px;
-    margin-bottom:25px;
+.deeper-delves-page .themes-box h3, .deeper-delves-page .minutes-box h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-family: var(--font-bri);
+    color: #000;
 }
 
-.deeper-delves-page .themes-box ul{
-    padding-left:20px;
+.deeper-delves-page .minutes-box h3 {
+    margin-bottom: 10px;
+}
+
+.deeper-delves-page .themes-box ul {
+    padding-left: 20px;
+    list-style-type: square;
 }
 
 .deeper-delves-page .themes-box li{
     margin-bottom:18px;
 }
 
-.deeper-delves-page .minutes-box{
-    background:#ecd4c2;
-    padding:40px;
+.deeper-delves-page .minutes-box {
+    background: #E0C5B0;
+    padding: 24px;
 }
 
 .deeper-delves-page .minutes-box p{
@@ -3238,12 +3256,13 @@ body.deeper-delves-page {
     margin-bottom:25px;
 }
 
-.deeper-delves-page .minutes-box a{
-    display:inline-block;
-    border:1px solid var(--brown);
-    padding:12px 25px;
-    color:#000;
-    text-decoration:none;
+.deeper-delves-page .minutes-box a {
+    display: inline-block;
+    border: 1px solid var(--brown);
+    padding: 12px 25px;
+    color: #000;
+    text-decoration: none;
+    line-height: 1;
 }
 
 .newsletter-icon {
