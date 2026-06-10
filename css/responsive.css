@@ -365,6 +365,11 @@
     .contact-grid-btm {
         grid-template-columns: repeat(2, 1fr);
     }
+
+
+    .article-content{
+        max-width:100%;
+    }
 }
 
 @media screen and (max-width:768px){
@@ -597,6 +602,29 @@
         font-size: 16px;
         line-height: 1.7;
         padding-left: 24px;
+    }
+
+    .single-post{
+        padding:50px 15px;
+    }
+
+
+    .article-meta{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .article-content p{
+        font-size:16px;
+    }
+
+    .membership-box{
+        padding:25px;
+    }
+
+    .dropcap:first-letter{
+        font-size:52px;
+        line-height:45px;
     }
 }
 
