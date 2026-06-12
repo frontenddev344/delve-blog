@@ -3760,7 +3760,7 @@ body.deeper-delves-page {
 
 /* related post start */
 
-.related-science {
+.related-post-sec {
     padding: 80px 0;
     background: #faf8f3;
 }
@@ -3769,7 +3769,7 @@ body.deeper-delves-page {
     max-width: 1280px;
 }
 
-.related-science h2 {
+.related-post-sec h2 {
     font-size: 42px;
     font-weight: 500;
     color: #1f1f1f;

@@ -371,7 +371,7 @@
         max-width:100%;
     }
 
-    .science-grid {
+    .cst-single-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -639,15 +639,15 @@
         line-height:45px;
     }
 
-     .science-grid {
+     .cst-single-grid {
         grid-template-columns: 1fr;
     }
 
-    .related-science {
+    .related-post-sec {
         padding: 60px 0;
     }
 
-    .related-science h2 {
+    .related-post-sec h2 {
         font-size: 28px;
         margin-bottom: 30px;
     }
@@ -773,7 +773,7 @@
         grid-template-columns:100%;
     }
 
-    .related-science {
+    .related-post-sec {
         padding: 40px 0;
     }
 }
