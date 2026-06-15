@@ -3269,7 +3269,7 @@ body.deeper-delves-page {
     gap:50px;
 }
 
-.exploration-sec .article-card.horizontal {
+.deeper-delves-sec .article-card.horizontal {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column: span 2;
