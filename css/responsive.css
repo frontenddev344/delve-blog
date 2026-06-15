@@ -66,7 +66,7 @@
         bottom: -175px;
     }
 
-    .deeper-delves-page .hero-content {
+    .deeper-delves-sec .hero-content {
         padding: 24px;
     }
 }
@@ -331,26 +331,26 @@
         gap: 24px;
     }
 
-    .deeper-delves-page .hero-feature {
+    .deeper-delves-sec .hero-feature {
         margin-bottom: 40px;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .deeper-delves-page .hero-image img {
+    .deeper-delves-sec .hero-image img {
         width: 100%;
         display: block;
         height: 100%;
         object-fit: cover;
     }
 
-    .deeper-delves-page .hero-content {
+    .deeper-delves-sec .hero-content {
         padding: 24px;
         position: static;
         transform: translateY(0);
         width: 100%;
         max-width: 100%;
     }
-    .deeper-delves-page .bottom-grid {
+    .exploration-sec .bottom-grid {
         grid-template-columns: 1fr 1fr;
         gap: 24px;
     }
@@ -568,28 +568,28 @@
         padding: 60px 0;
     }
 
-    .deeper-delves-page .hero-feature {
+    .deeper-delves-sec .hero-feature {
         grid-template-columns: 100%;
     }
 
-    .deeper-delves-page .article-card.horizontal {
+    .deeper-delves-sec .article-card.horizontal {
         grid-template-columns: 100%;
         grid-column: span 1;
     }
 
-    .deeper-delves-page .article-grid {
+    .deeper-delves-sec .article-grid {
         grid-template-columns: 1fr 1fr;
     }
 
-    .deeper-delves-page .article-card.large {
+    .deeper-delves-sec .article-card.large {
         grid-row: span 1;
     }
-    .deeper-delves-page .article-card img {
+    .deeper-delves-sec .article-card img {
         height: 260px;
         object-fit: cover;
     }
 
-     .deeper-delves-page .bottom-grid {
+     .exploration-sec .bottom-grid {
         grid-template-columns: 100%;
     }
 
@@ -762,10 +762,10 @@
     .delve-copy .grid {
         gap: 20px;
     }
-    .deeper-delves-page .article-grid {
+    .deeper-delves-sec .article-grid {
         grid-template-columns: 100%;
     }
-    .deeper-delves-page .card-content h3 {
+    .deeper-delves-sec .card-content h3 {
         font-size: 22px;
     }
 
