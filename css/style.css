@@ -769,10 +769,11 @@ li.site-logo.desktop-logo {
 
 /* site footer start  */
 
-.site-footer{
-    background:var(--secondary-clr);
-    padding:60px 0 25px;
-    position:relative;
+.site-footer {
+    background: var(--secondary-clr);
+    padding: 60px 0 25px;
+    position: relative;
+    display: none;
 }
 
 
