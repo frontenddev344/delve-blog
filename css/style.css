@@ -891,8 +891,8 @@ li.site-logo.desktop-logo {
 
 .how-we-got-content .qoute {
     width: 100%;
-    max-width: 440px;
-    margin: 20px auto 0;
+    /* max-width: 440px;
+    margin: 20px auto 0; */
 }
 
 
