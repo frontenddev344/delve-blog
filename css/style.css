@@ -3369,6 +3369,7 @@ body.deeper-delves-page {
     transition: all 0.2s linear;
     position: relative;
     isolation: isolate;
+    overflow: hidden;
 }
 
 .deeper-delves-sec .hero-btn::before {
