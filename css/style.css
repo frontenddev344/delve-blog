@@ -3839,3 +3839,35 @@ body.deeper-delves-page {
 }
 
 /* related post end */
+
+/* mock up page start   */
+
+.category-wrap{
+    gap:15px;
+}
+
+.category-wrap .nav-link{
+    border:1px solid #e4ddd5;
+    border-radius:50px;
+    padding:12px 28px;
+    color:#555;
+    background:#fff;
+    font-weight:600;
+    transition:.3s;
+}
+
+.category-wrap .nav-link.active{
+    background:#6f3918 !important;
+    color:#fff !important;
+    border-color:#6f3918;
+}
+
+.category-wrap .nav-link:hover{
+    color:#6f3918;
+}
+
+.mockup-sec .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
