@@ -42,26 +42,26 @@ gsap.from(".mind-img img", {
 });
 
 
-const tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".how-we-got-content",
-    start: "top 75%",
-    end: "center 50%",
-    scrub: true,
-    // markers:true
-  }
-});
+// const tl = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".how-we-got-content",
+//     start: "top 75%",
+//     end: "center 50%",
+//     scrub: true,
+//     // markers:true
+//   }
+// });
 
-tl.from(".how-we-got-content h2", {
-  y: 100,
-  opacity: 0
-})
-.from(".how-we-got-content > p", {
-  y: 80,
-  opacity: 0
-}, "-=0.2")
-.from(".how-we-got-content .qoute", {
-  y: 60,
-  opacity: 0,
-  scale: 0.9
-}, "-=0.2");
+// tl.from(".how-we-got-content h2", {
+//   y: 100,
+//   opacity: 0
+// })
+// .from(".how-we-got-content > p", {
+//   y: 80,
+//   opacity: 0
+// }, "-=0.2")
+// .from(".how-we-got-content .qoute", {
+//   y: 60,
+//   opacity: 0,
+//   scale: 0.9
+// }, "-=0.2");
