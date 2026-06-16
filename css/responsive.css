@@ -382,6 +382,22 @@
     .card-content h3 {
         font-size: 28px;
     }
+
+    .mockup-banner-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mockup-banner-grid .item:last-child {
+        grid-column: 1/-1;
+    }
+
+    .mockup-banner-rabbit .rabbit-card {
+        margin: 0 auto;
+    }
+
+    .mockup-sec .blog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media screen and (max-width:768px){
@@ -655,6 +671,17 @@
     .card-content h3 {
         font-size: 22px;
     }
+
+    .mockup-banner-grid {
+        grid-template-columns: 100%;
+    }
+    .brain-img {
+        text-align: center;
+    }
+
+    .mockup-sec .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width:575px){
@@ -775,5 +802,14 @@
 
     .related-post-sec {
         padding: 40px 0;
+    }
+
+     .mockup-sec .blog-grid {
+        grid-template-columns: 100%;
+    }
+
+    .mockup-banner-content p {
+        font-size: 18px;
+        line-height: 1.5;
     }
 }

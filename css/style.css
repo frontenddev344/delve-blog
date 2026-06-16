@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@200..900&display=swap');
 
 /*global start*/
 * {
@@ -3842,18 +3843,100 @@ body.deeper-delves-page {
 
 /* mock up page start   */
 
+.mockup-page  .container:not(.site-header .container) {
+    max-width: 1280px;
+}
+
+.mockup-page {
+    background: #faf8f3;
+}
+
+.mockup-sec {
+    background: #faf8f3;
+    padding-bottom: 60px;
+}
+
 .category-wrap{
     gap:15px;
 }
 
-.category-wrap .nav-link{
-    border:1px solid #e4ddd5;
-    border-radius:50px;
-    padding:12px 28px;
-    color:#555;
-    background:#fff;
-    font-weight:600;
-    transition:.3s;
+
+
+.mockup-banner-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+.mockup-banner-content h2 {
+    font-size: clamp(30px, 4vw,80px);
+    line-height: 1;
+    letter-spacing: -3px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Noto Serif HK", serif;
+    color: #000;
+}
+
+.mockup-banner-content h2 img {
+    display: block;
+}
+
+.mockup-banner-content p {
+    color: #000000;
+    text-align: left;
+    font-size: 21px;
+    line-height: 37px;
+    font-weight: 400;
+}
+
+.mockup-sec .blog-card .card-content {
+    padding: 10px 0 0;
+}
+
+
+.mockup-banner-rabbit .rabbit-card {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.mockup-banner-rabbit .rabbit-card .explore-delve a {
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: -0.7px;
+    font-weight: 600;
+    color: #314467;
+    text-align: center;
+}
+
+.mockup-banner-rabbit .rabbit-card .explore-delve a span {
+    color: var(--theme-clr);
+}
+
+.mockup-sec ul#delvetteTabs {
+    margin: 44px 0;
+}
+
+.category-wrap .nav-link {
+    border: 1px solid #e4ddd5;
+    border-radius: 50px;
+    padding: 12px 28px;
+    color: #555;
+    background: transparent;
+    transition: .3s;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    height: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    font-family: open, sans-serif;
 }
 
 .category-wrap .nav-link.active{
@@ -3862,12 +3945,78 @@ body.deeper-delves-page {
     border-color:#6f3918;
 }
 
+.category-wrap .nav-link.active img {
+    filter: brightness(0) invert(1);
+}
+
 .category-wrap .nav-link:hover{
     color:#6f3918;
+}
+
+.category-wrap .nav-link.active svg path {
+    stroke: #fff;
 }
 
 .mockup-sec .blog-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+}
+
+.mockup-sec .blog-card {
+    background: #FAF8F3;
+    border: 1px solid #deddd8;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.mockup-sec .blog-card > img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+.mockup-sec img {
+    max-width: max-content;
+    height: auto;
+}
+
+.mockup-sec .blog-card .category-name {
+    color: #89532f;
+    font-size: 17px;
+    line-height: 15px;
+    font-weight: 700;
+}
+
+.mockup-sec .blog-card .card-content h3 {
+    color: #314467;
+    text-align: left;
+    font-size: 19px;
+    line-height: 1.2;
+    font-family: "Noto Serif HK", serif;
+    font-weight: 900;
+    margin: 5px 0 8px;
+}
+
+.mockup-sec .blog-card .card-content p {
+    color: #314467;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: 'Funnel Display';
+}
+
+.mockup-sec .blog-card .card-content .read-time {
+    margin-top: 10px;
+    color: #314467;
+    font-family: 'Funnel Display';
+    font-size: 17px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.mockup-sec .blog-card .card-content .read-time {
+    margin-top: 10px;
+    color: #314467;
+    font-family: 'Funnel Display';
 }
