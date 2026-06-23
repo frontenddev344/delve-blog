@@ -833,9 +833,11 @@
         border-radius: 16px;
         padding: 40px 20px;
     }
-    .membership-card .benefit-item {
+   .membership-card .benefit-item {
         align-items: center;
         flex-wrap: wrap;
+        padding: 20px;
+        border-radius: 16px;
     }
     .membership-heading-details .icon {
         width: 70px;
@@ -852,7 +854,24 @@
         border-radius: 16px;
     }
 
+    .membership-hero h1 {
+        margin-top: 40px;
+        margin-bottom: 0;
+    }   
+
     .premium-benefits li {
         padding-left: 25px;
+    }
+    .membership-heading-details h2 {
+        font-size: 26px;
+    }
+    .membership-card h4 {
+        font-size: 20px;
+    }
+    .premium-benefits h3 {
+        font-size: 20px;
+    }
+    .membership-hero p {
+        font-size: 20px;
     }
 }
