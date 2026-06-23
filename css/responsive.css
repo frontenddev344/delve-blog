@@ -398,6 +398,23 @@
     .mockup-sec .blog-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .premium-wrapper {
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .premium-benefits {
+        width: 100%;
+    }
+
+    .pricing-cards {
+        width: 100%;
+    }
+
+    .premium-membership {
+        padding: 40px 0;
+    }
 }
 
 @media screen and (max-width:768px){
@@ -811,5 +828,31 @@
     .mockup-banner-content p {
         font-size: 18px;
         line-height: 1.5;
+    }
+    .membership-card, .premium-wrapper {
+        border-radius: 16px;
+        padding: 40px 20px;
+    }
+    .membership-card .benefit-item {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .membership-heading-details .icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+
+    .price-card {
+        border-radius: 16px;
+        padding: 30px 20px;
+    }
+    .trial-box {
+        padding: 40px 20px;
+        border-radius: 16px;
+    }
+
+    .premium-benefits li {
+        padding-left: 25px;
     }
 }

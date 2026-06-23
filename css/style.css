@@ -161,23 +161,39 @@ p {
 }
 
 .secondary-btn {
-    position: relative;
-    font-size: 18px;
-    letter-spacing: 0.1em;
-    font-weight: 400;
     background: #07152f;
     color: #fff;
     border: none;
     padding: 15px 40px;
     border-radius: 6px;
     transition: all 0.2s linear;
+    position: relative;
+    isolation: isolate;
 }
 
-.secondary-btn:hover {
-    background: var(--theme-clr);
+.secondary-btn:hover{
     color: #fff;
 }
 
+.secondary-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    background: var(--theme-clr);
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.secondary-btn:hover::before {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
 
 /* site btns  */
 /*header start*/
@@ -2370,6 +2386,7 @@ body.about-page {
 .membership-explainer{
     padding:80px 0;
     background:#f5f1eb;
+    display: none;
 }
 
 .content-card{
@@ -4210,3 +4227,317 @@ body.deeper-delves-page {
     color: #314467;
     font-family: 'Funnel Display';
 }
+
+/* new  memebership page start  */
+
+.premium-membership-page {
+    background: #f5f1eb;
+}
+
+.premium-membership-page .container:not(.site-header .container) {
+    max-width: 1280px;
+}
+
+.membership-hero {
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top: 70px;
+}
+
+.membership-hero h1 {
+    margin-bottom: 20px;
+    font-size: clamp(32px, 6vw,48px);
+    letter-spacing: -0.96px;
+    font-weight: 700;
+    color: #002428;
+    line-height: 1.2;
+    font-family: var(--font-bri);
+    text-align: center;
+}
+
+.membership-hero p {
+    font-size: 22px;
+    color: var(--theme-clr);
+    font-weight: 500;
+    margin: 0;
+}
+
+
+/* CARD */
+
+.membership-card,
+.premium-wrapper{
+    background:white;
+    border-radius:35px;
+    padding:60px 40px;
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.07);
+}
+
+.membership-card h3{
+    font-size:20px;
+    color:#9d6835;
+    margin-bottom:20px;
+}
+
+.intro{
+    font-weight:600;
+    margin-bottom:40px;
+}
+
+
+.membership-card h4 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: var(--theme-clr);
+}
+
+
+/* BENEFIT GRID */
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.benefit-item{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    padding:30px;
+    border:1px solid #eee;
+    border-radius:25px;
+    transition:.3s;
+}
+
+.benefit-item:hover{
+    transform:translateY(-6px);
+}
+
+.benefit-item i{
+    width:70px;
+    height:70px;
+    flex-shrink:0;
+    border-radius:50%;
+    background:#faf3eb;
+    color:#9d6835;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+}
+
+.benefit-item p {
+    font-size: 14px;
+    margin: 0;
+    color: var(--black);
+}
+
+.membership-card .benefit-item {
+    align-items: center;
+}
+
+
+
+/* PREMIUM */
+
+.premium-wrapper{
+    display:flex;
+    gap:60px;
+    justify-content:space-between;
+}
+
+.premium-benefits{
+    width:60%;
+}
+
+.premium-benefits h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--theme-clr);
+}
+
+.premium-benefits ul{
+    list-style:none;
+}
+
+.premium-benefits li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: 'Funnel Display';
+    color: var(--black);
+}
+
+.premium-benefits li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    color:#9d6835;
+    font-weight:bold;
+}
+
+
+
+/* TRIAL BOX */
+
+.trial-box{
+    margin-top:50px;
+    background:#faf7f2;
+    padding:40px;
+    border-radius:25px;
+}
+
+.trial-box h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #0d2336;
+}
+
+
+
+/* PRICING */
+
+.pricing-cards{
+    width:40%;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.price-card{
+    background:#fff;
+    border-radius:30px;
+    padding:40px;
+    text-align:center;
+    border:1px solid #ececec;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.price-card.active{
+    border:2px solid #9d6835;
+}
+
+.price-card h4 {
+    font-size: 28px;
+    color: #0d2336;
+    margin: 0;
+    font-family: var(--font-bri);
+}
+
+.price-card .price {
+    font-size: clamp(28px,4vw,52px);
+    font-weight: 700;
+    color: var(--theme-clr);
+    margin-bottom: 0;
+}
+
+.price-card p{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.price-card small{
+    display:block;
+    color:#2e8b57;
+    font-weight:600;
+}
+
+
+
+/* BUTTON */
+
+.btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    padding:18px 40px;
+    background:#071b32;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    margin-top:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#9d6835;
+}
+
+.membership-heading-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: start;
+    border-bottom: 2px solid #eae0d1;
+    max-width: max-content;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.membership-heading-details .icon {
+    width: 90px;
+    height: 90px;
+    font-size: 40px;
+    color: var(--theme-clr);
+}
+
+.membership-heading-details h2 {
+    font-family: var(--font-bri);
+    font-size: 32px;
+}
+
+.membership-heading-details .content p {
+    margin: 0;
+    color: var(--theme-clr);
+    font-weight: 500;
+    max-width: 400px;
+}
+
+.membership-heading-details .content p span {
+    color: var(--black);
+}
+
+.resiter-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.subcribe-btn {
+    margin-top: 20px;
+}
+
+.subcribe-btn a {
+    background: var(--theme-clr);
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 6px;
+    transition: all 0.2s linear;
+    position: relative;
+    isolation: isolate;
+    text-transform: capitalize;
+}
+
+.subcribe-btn a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    background: #07152f;
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.subcribe-btn a:hover::before {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+/* new membership page end  */
