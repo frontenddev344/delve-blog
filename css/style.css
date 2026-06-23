@@ -4540,4 +4540,11 @@ body.deeper-delves-page {
     left: 0;
     width: 100%;
 }
+
+.trial-box p {
+    color: var(--theme-clr);
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+}
 /* new membership page end  */
