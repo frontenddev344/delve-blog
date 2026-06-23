@@ -5,6 +5,11 @@ $(document).ready(function(){
         $("body").removeClass("toggle");
       });
     });
+
+    $(".price-card").click(function(){
+      $(this).addClass("active").siblings().removeClass("active")
+    });
+
 })
   
 
@@ -65,3 +70,4 @@ gsap.from(".mind-img img", {
 //   opacity: 0,
 //   scale: 0.9
 // }, "-=0.2");
+
