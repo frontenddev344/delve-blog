@@ -4410,7 +4410,7 @@ body.deeper-delves-page {
 .price-card{
     background:#fff;
     border-radius:30px;
-    padding:40px;
+    padding:50px;
     text-align:center;
     border:1px solid #ececec;
     box-shadow:0 10px 30px rgba(0,0,0,.05);
@@ -4541,10 +4541,47 @@ body.deeper-delves-page {
     width: 100%;
 }
 
-.trial-box p {
+/* .subs-info {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.subs-info p {
     color: var(--theme-clr);
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
     margin: 0;
+} */
+
+
+.subs-info {
+    padding: 24px 28px;
+    background: #fff;
+    border-radius: 14px;
+    margin-top: 30px;
+    border: 1px solid rgba(0,0,0,.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,.03);
+}
+
+.subs-info p {
+    color: var(--theme-clr);
+    font-size: 16px;
+    line-height: 1.9;
+    font-weight: 500;
+    margin: 0;
+}
+
+.subs-info p + p {
+    margin-top: 8px;
+}
+
+.subs-info strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--theme-clr);
+    font-size: 17px;
+    font-weight: 600;
 }
 /* new membership page end  */

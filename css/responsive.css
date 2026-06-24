@@ -69,6 +69,14 @@
     .deeper-delves-sec .hero-content {
         padding: 24px;
     }
+
+    .premium-wrapper {
+        gap: 30px;
+    }
+
+    .price-card {
+        padding: 70px 40px;
+    }
 }
 
 @media screen and (max-width:991px){
