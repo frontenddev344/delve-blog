@@ -4685,8 +4685,9 @@ body.deeper-delves-page {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--theme-clr);
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 18px;
+    margin-top: 18px;
 }
 
 .manifesto-main .hero h1 {
@@ -4703,13 +4704,22 @@ body.deeper-delves-page {
     color: var(--theme-clr);
 }
 
-.manifesto-main .hero-sub {
+.manifesto-main p {
     font-size: 16px;
     color: var(--black);
-    max-width: 600px;
+    max-width: 990px;
     margin: 0 auto;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.6;
+    text-wrap: balance;
+}
+
+.manifesto-main p + p {
+    margin-top: 10px;
+}
+
+.manifesto-main p a {
+    text-decoration: underline;
 }
 
 .manifesto-main .hero-meta {
