@@ -6,9 +6,9 @@ $(document).ready(function(){
       });
     });
 
-    $(".price-card").click(function(){
-      $(this).addClass("active").siblings().removeClass("active")
-    });
+    // $(".price-card").click(function(){
+    //   $(this).addClass("active").siblings().removeClass("active")
+    // });
 
 })
   
