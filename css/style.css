@@ -4884,7 +4884,7 @@ body.deeper-delves-page {
 .manifesto-main .human-ai-inner {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 0.5fr 1fr;
     gap: 60px;
     align-items: center;
 }
@@ -5040,7 +5040,7 @@ body.deeper-delves-page {
 
 .temp-card {
     text-align: center;
-    padding: 24px 12px;
+    padding:0;
 }
 
 .temp-icon {

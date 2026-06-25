@@ -77,6 +77,14 @@
     .price-card {
         padding: 70px 40px;
     }
+
+    .temp-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .manifesto-main .human-ai-inner {
+        gap: 30px;
+    }
 }
 
 @media screen and (max-width:991px){
@@ -423,6 +431,14 @@
     .premium-membership {
         padding: 40px 0;
     }
+
+    .what-we-belive .beliefs-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .conversation-inner {
+        gap: 30px;
+    }
 }
 
 @media screen and (max-width:768px){
@@ -730,6 +746,41 @@
         right: 0;
         top: -15px;
     }
+
+    .what-we-belive .beliefs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .conversation-inner {
+        grid-template-columns: 100%;
+    }
+
+    .convo-right {
+        padding-top: 0;
+    }
+    .manifesto-main .human-ai-inner {
+        grid-template-columns: 100%;
+    }
+
+    .manifesto-main .human-ai-content > p ~ p {
+        margin: 0;
+    }
+
+    .manifesto-main .human-ai-section {
+        padding: 40px 0;
+    }
+
+    .conversation-section {
+        padding: 40px 0;
+    }
+
+    .temperament-section {
+        padding: 40px 0;
+    }
+
+    .invitation-section {
+        padding: 40px 0;
+    }
 }
 
 @media screen and (max-width:575px){
@@ -908,5 +959,14 @@
 
     .membership-note-box {
         border-radius: 16px;
+    }
+
+    .manifesto-main .two-cols {
+        grid-template-columns: 100%;
+    }
+
+    .invite-card {
+        padding: 24px;
+        border-radius: 8px;
     }
 }
