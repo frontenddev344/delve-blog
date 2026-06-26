@@ -4672,6 +4672,10 @@ body.deeper-delves-page {
     font-weight: 600;
     color: #222;
 }
+
+.annual-card p {
+    color: var(--black);
+}
 /* new membership page end  */
 
 /* devle manifesto start   */
