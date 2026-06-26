@@ -1571,11 +1571,12 @@ body.about-page {
 .newsletter-content p {
     color: #fff;
     line-height: 1.6;
-    max-width: 750px;
+    max-width: 600px;
     margin: 0 auto 50px;
     font-size: 20px;
     font-weight: 400;
     font-family: var(--font-bri);
+    text-wrap: balance;
 }
 
 .newsletter-form {
