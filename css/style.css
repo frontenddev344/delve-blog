@@ -4718,6 +4718,11 @@ body.deeper-delves-page {
     text-align: left;
 }
 
+.manifesto-main h5 {
+    font-size: 18px;
+    text-align: center;
+}
+
 .manifesto-main p + p {
     margin-top: 10px;
 }
