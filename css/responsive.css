@@ -804,6 +804,13 @@
     .manifesto-main .hero {
         padding: 60px 0 40px;
     }
+
+    .marketing-integirty .prev-next {
+        grid-template-columns:100%;
+    }
+    .marketing-integirty .section-divider {
+        margin: 2rem 0;
+    }
 }
 
 @media screen and (max-width:575px){

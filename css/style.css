@@ -5948,7 +5948,7 @@ exploration-sec .minutes-box h3 {
 
 /* ===== SECTION SPACING ===== */
 .marketing-integirty .editorial-section {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 /* ===== LEAD PARAGRAPH ===== */
@@ -6017,6 +6017,8 @@ exploration-sec .minutes-box h3 {
     background: var(--navy);
     border-radius: 4px;
     overflow: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 .marketing-integirty blockquote.pull-quote::before {
@@ -6388,22 +6390,42 @@ exploration-sec .minutes-box h3 {
 }
 
 .feedback-submit-btn {
-    margin-top: 28px;
-    padding: 16px 40px;
-    background: var(--brown);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #06152e;
     color: #fff;
     border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
+    padding: 12px 40px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: .3s;
+    transition: all 0.2s linear;
+    margin-top: 16px;
+    font-size: 16px;
+    font-family: var(--font-bri);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
 }
 
-.feedback-submit-btn:hover {
-    background: #744826;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+.feedback-submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    background: var(--theme-clr);
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.feedback-submit-btn:hover::before {
+    right: auto;
+    left: 0;
+    width: 100%;
 }
 
 
