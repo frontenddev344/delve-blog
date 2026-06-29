@@ -5895,7 +5895,7 @@ exploration-sec .minutes-box h3 {
 
 .marketing-integirty .hero {
     margin: 0 auto;
-    padding: 8rem 2rem 5rem;
+    padding: 40px 0;
     text-align: center;
 }
 
@@ -5962,11 +5962,10 @@ exploration-sec .minutes-box h3 {
 
 /* ===== BODY TEXT ===== */
 .marketing-integirty p {
-    font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.9;
     color: #374151;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1rem;
 }
 
 /* ===== LIST STANZAS (the language/targets list style) ===== */
@@ -6036,7 +6035,7 @@ exploration-sec .minutes-box h3 {
 
 .marketing-integirty blockquote.pull-quote p {
     font-family: var(--font-primary);
-    font-size: 1.45rem;
+    font-size: 24px;
     font-weight: 500;
     font-style: italic;
     color: var(--light-text);

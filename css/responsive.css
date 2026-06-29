@@ -811,6 +811,17 @@
     .marketing-integirty .section-divider {
         margin: 2rem 0;
     }
+
+    .marketing-integirty blockquote.pull-quote {
+        padding: 2.5rem 1rem;
+    }
+
+    .marketing-integirty .comparison-grid {
+        grid-template-columns: 100%;
+    }
+    .marketing-integirty .comparison-col {
+        padding: 1rem;
+    }
 }
 
 @media screen and (max-width:575px){
@@ -1012,5 +1023,13 @@
     }
     .manifesto-main .knowledge-text h4 {
         font-size: 14px;
+    }
+
+    .marketing-integirty .stanza-list {
+        padding-left: 1rem;
+    }
+
+    .marketing-integirty .declaration-block {
+        padding: 2rem 1rem;
     }
 }
