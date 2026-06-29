@@ -6524,9 +6524,13 @@ exploration-sec .minutes-box h3 {
 button.profile-name {
     background: transparent;
     border: 0;
-    color: #fff;
+    color:var(--black);
     position: relative;
     margin-left: 5px;
+}
+
+header.dark-header button.profile-name {
+    color: #fff;
 }
 .profile-dropdown {
     position: absolute;
