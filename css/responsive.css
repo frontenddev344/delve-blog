@@ -1032,4 +1032,20 @@
     .marketing-integirty .declaration-block {
         padding: 2rem 1rem;
     }
+
+    .avatar-content > a {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .profile-name span {
+        display: none;
+    }
+    .search-bar input[type="search"] {
+        max-width: 190px;
+    }
+    .header-right {
+        gap: 15px;
+    }
 }
