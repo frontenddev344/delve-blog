@@ -7093,7 +7093,8 @@ header.dark-header button.profile-name {
 
 .dvb-content-list-item:hover {
     background: #f9fafb;
-    transform: translate(10px);
+    transform: translate(5px);
+    padding: 0.7rem;
 }
 
 .dvb-content-thumb {
