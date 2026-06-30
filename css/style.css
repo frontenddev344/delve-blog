@@ -6548,14 +6548,14 @@ exploration-sec .minutes-box h3 {
 
 .avatar-content>a {
     color: #fff;
-    width: 42px;
-    height: 42px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     background: var(--theme-clr);
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 button.profile-name {
@@ -6599,7 +6599,7 @@ header.dark-header button.profile-name {
     z-index: 2;
 }
 
-.avatar-content:hover .profile-dropdown {
+.profile-name:hover .profile-dropdown {
     opacity: 1;
     visibility: visible;
 }
