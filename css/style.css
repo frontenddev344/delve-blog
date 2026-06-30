@@ -6178,12 +6178,12 @@ exploration-sec .minutes-box h3 {
 }
 
 .marketing-integirty .comparison-col:first-child {
-    background: var(--card);
+    background: #ffffff;
     border-right: 1px solid var(--border);
 }
 
 .marketing-integirty .comparison-col:last-child {
-    background: var(--accent-light);
+    background: #f3e9df;
 }
 
 .marketing-integirty .comparison-col-title {
