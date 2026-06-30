@@ -6081,6 +6081,13 @@ exploration-sec .minutes-box h3 {
     z-index: 1;
 }
 
+.marketing-integirty-img span {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    color: #37415194;
+}
+
 /* ===== SECTION HEADING ===== */
 .marketing-integirty .section-heading {
     font-family: var(--font-primary);
