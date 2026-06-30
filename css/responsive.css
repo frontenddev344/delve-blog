@@ -822,6 +822,10 @@
     .marketing-integirty .comparison-col {
         padding: 1rem;
     }
+
+     .search-bar input[type="search"] {
+        max-width: 190px;
+    }
 }
 
 @media screen and (max-width:575px){
@@ -1042,10 +1046,15 @@
     .profile-name span {
         display: none;
     }
-    .search-bar input[type="search"] {
-        max-width: 190px;
-    }
+   
     .header-right {
         gap: 15px;
     }
+
+    .dvb-hero-area { flex-direction: column; padding: 3rem 1.5rem; }
+    .dvb-rabbit-card { width: 150px; }
+    .dvb-results-cards { grid-template-columns: 1fr; }
+    .dvb-stepper { padding: 0.75rem 1rem; }
+    .dvb-step-label { display: none; }
+    #dvbModal .modal-dialog { margin: 1rem; max-width: calc(100% - 2rem); }
 }

@@ -80,7 +80,7 @@
                   <img src="images/rabbit.png" alt="rabbit">
                   <a href="#" class="click-me">click <br> me</a>
                 </div>
-                <div class="explore-btn">
+                <div class="explore-btn" data-bs-toggle="modal" data-bs-target="#dvbModal">
                   <a href="#">Explore DelveBlog with DelveBurt</a>
                 </div>
               </div>
@@ -241,6 +241,94 @@
     </section>
 
   </main>
+
+
+  <!-- delve navigaion popup start  -->
+     <!-- ============================================================  -->
+  <div class="modal fade" id="dvbModal" tabindex="-1" aria-labelledby="dvbModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="dvb-modal-header">
+          <span class="dvb-modal-title" id="dvbModalLabel">DelveBurt</span>
+          <button type="button" class="dvb-modal-close" data-bs-dismiss="modal" aria-label="Close">✕</button>
+        </div>
+
+        <div class="dvb-stepper" id="dvbStepper">
+          <div class="dvb-step-item active" id="dvbStep-1">
+            <div class="dvb-step-num">1</div>
+            <span class="dvb-step-label">Who I Am</span>
+          </div>
+          <div class="dvb-step-connector" id="dvbConn-1"></div>
+          <div class="dvb-step-item" id="dvbStep-2">
+            <div class="dvb-step-num">2</div>
+            <span class="dvb-step-label">What I'd Like To Do Next</span>
+          </div>
+          <div class="dvb-step-connector" id="dvbConn-2"></div>
+          <div class="dvb-step-item" id="dvbStep-3">
+            <div class="dvb-step-num">3</div>
+            <span class="dvb-step-label">Results</span>
+          </div>
+        </div>
+
+        <div class="dvb-modal-body">
+
+          <!-- Panel 1: Who I Am -->
+          <div class="dvb-panel active" id="dvbPanel-1">
+            <p class="dvb-panel-title">Who I Am</p>
+            <div class="dvb-radio-list" id="dvbWhoList"></div>
+          </div>
+
+          <!-- Panel 2: What I'd Like To Do Next -->
+          <div class="dvb-panel" id="dvbPanel-2">
+            <p class="dvb-panel-title">What I'd Like To Do Next</p>
+            <div class="dvb-radio-list" id="dvbWhatList"></div>
+          </div>
+
+          <!-- Panel 3: Optional Search -->
+          <div class="dvb-panel" id="dvbPanel-3">
+            <span class="dvb-search-label">Know exactly what you're looking for?</span>
+            <div class="dvb-search-box">
+              <span class="dvb-search-icon"><i class="ri-search-line"></i></span>
+              <input type="text" id="dvbSearchInput" placeholder="Search DelveBlog..." aria-label="Search DelveBlog" />
+            </div>
+            <div class="dvb-or-divider">OR</div>
+            <p class="dvb-continue-text">Continue with DelveBurt</p>
+            <button class="dvb-btn-primary dvb-btn-full" onclick="dvb.goToResults()">DELVE</button>
+            <button class="dvb-btn-back" style="width:100%;margin-top:0.5rem;" onclick="dvb.goToStep(2)">Back</button>
+            <p class="dvb-search-powered">Search is powered by <a href="#">SearchWP</a></p>
+          </div>
+
+          <!-- Panel 4: Results -->
+          <div class="dvb-panel" id="dvbPanel-4">
+            <div class="dvb-results-meta">
+              <div class="dvb-results-meta-item"><span><i class="ri-user-3-line"></i></span><span>You are: <strong id="dvbMetaWho">—</strong></span></div>
+              <div class="dvb-results-meta-item"><span><i class="ri-target-line"></i></span><span>You want to: <strong id="dvbMetaWhat">—</strong></span></div>
+              <button class="dvb-results-meta-change" onclick="dvb.goToStep(1)">Change</button>
+            </div>
+            <p class="dvb-results-section-title">Recommended For You</p>
+            <div class="dvb-results-cards" id="dvbResultsCards"></div>
+            <button class="dvb-view-more-btn" onclick="dvb.goToContentBrowse()">View More Results</button>
+          </div>
+
+          <!-- Panel 5: Content Browse -->
+          <div class="dvb-panel" id="dvbPanel-5">
+            <div class="dvb-content-header">
+              <p class="dvb-content-header-title" id="dvbBrowseTitle">Learn About AI</p>
+              <p class="dvb-content-count">Showing 12 results &nbsp;|&nbsp; Sort: Relevance</p>
+            </div>
+            <div class="dvb-content-list" id="dvbContentList"></div>
+          </div>
+
+        </div><!-- /dvb-modal-body -->
+
+        <div class="dvb-modal-footer" id="dvbFooter"></div>
+
+      </div><!-- /modal-content -->
+    </div><!-- /modal-dialog -->
+  </div>
+
+  <!-- delve navigation popup end  -->
 
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
