@@ -826,6 +826,13 @@
      .search-bar input[type="search"] {
         max-width: 190px;
     }
+
+    .interconnect-qoute .pull-quote {
+        padding: 40px 20px;
+    }
+    .interconnect-qoute .pull-quote blockquote {
+        font-size: 22px;
+    }
 }
 
 @media screen and (max-width:575px){
@@ -1049,6 +1056,10 @@
    
     .header-right {
         gap: 15px;
+    }
+
+     .interconnect-qoute .pull-quote blockquote {
+        font-size: 22px;
     }
 
     .dvb-hero-area { flex-direction: column; padding: 3rem 1.5rem; }
