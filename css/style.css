@@ -1604,7 +1604,6 @@ body.about-page {
 .newsletter-content p {
     color: #fff;
     line-height: 1.6;
-    max-width: 600px;
     margin: 0 auto 50px;
     font-size: 20px;
     font-weight: 400;
@@ -6324,7 +6323,6 @@ exploration-sec .minutes-box h3 {
 
 .marketing-feedback-section {
     margin-top: 90px;
-    margin-bottom: 40px;
 }
 
 .marketing-feedback-card {
@@ -6550,6 +6548,56 @@ exploration-sec .minutes-box h3 {
     text-align: right;
 }
 
+.interconnect-qoute {
+    margin: 40px 0;
+}
+.interconnect-qoute .container {
+    max-width: 1280px;
+}
+
+.interconnect-qoute .pull-quote {
+    background: var(--cream);
+    padding: 40px 36px;
+    border-radius: 4px;
+    position: relative;
+    /* max-width: 700px; */
+    margin: 0 auto;
+}
+
+.interconnect-qoute .pull-quote .q-mark {
+    font-family: var(--font-bri);
+    font-size: 5rem;
+    color: var(--black);
+    line-height: 0.8;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.interconnect-qoute .pull-quote .q-close {
+    font-family: var(--font-bri);
+    font-size: 5rem;
+    color: var(--black);
+    line-height: 0.4;
+    display: block;
+    text-align: right;
+    margin-top: 16px;
+}
+
+.interconnect-qoute .pull-quote blockquote {
+    font-family: var(--font-bri);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--black);
+    font-style: normal;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.interconnect-qoute .pull-quote blockquote a {
+    color: var(--theme-clr);
+    text-decoration: underline;
+}
 /* new-page css end  */
 
 /* profile start   */

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>DelveBlog</title>
+</head>
+
+<body>
+
+    <main id="main">
+
+        <header class="site-header dark-header">
+            <div class="container">
+                <div class="menu-toggle">
+                    <div class="bar-1"></div>
+                    <div class="bar-2"></div>
+                    <div class="bar-3"></div>
+                </div>
+                <div class="site-logo">
+                    <a href="index.html"><img src="images/site-logo-white.png" alt="site-logo"></a>
+                </div>
+
+                <div class="header-right">
+                    <div class="search-bar">
+                        <input type="search" name="search" placeholder="Search">
+                    </div>
+                    <div class="profile">
+                        <div class="avatar">
+                            <div class="avatar-content">
+                                <a href="#">
+                                    <i class="ri-user-3-line"></i>
+                                </a>
+                                <button class="profile-name">
+                                    <span>User</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                    <ul class="profile-dropdown">
+                                        <li>
+                                            <a href="#">
+                                                Logout</a>
+                                        </li>
+                                    </ul>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </header>
+
+        <section class="site-banner">
+            <div class="container">
+                <div class="site-banner-warp">
+                    <div class="grid">
+                        <div class="item">
+                            <div class="banner-content" data-aos="fade-up" data-aos-duration="1500">
+                                <h1>The Problem</h1>
+                                <p>AI alone lacks heart...
+                                    Humans alone have limits...</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="banner-img">
+                                <img src="images/banner-new.png" alt="banner-img">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="rabbit-card">
+                                <div class="rabbit-card-img">
+                                    <img src="images/rabbit.png" alt="rabbit">
+                                    <a href="#" class="click-me">click <br> me</a>
+                                </div>
+                                <div class="explore-btn" data-bs-toggle="modal" data-bs-target="#rabbitModal">
+                                    <a href="#">Explore DelveBlog with DelveBurt</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- site-banner end  -->
+
+        <style>
+            /* Bootstrap Modal */
+            #rabbitModal .modal-dialog {
+                max-width: 560px;
+            }
+
+            #rabbitModal .modal-content {
+                border: 0;
+                border-radius: 18px;
+                overflow: hidden;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, .2);
+            }
+
+            #rabbitModal .modal-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 24px;
+                border-bottom: 1px solid #eee;
+            }
+
+            #rabbitModal .modal-title {
+                font-size: 28px;
+                font-weight: 700;
+                color: #000;
+            }
+
+            #rabbitModal .btn-close {
+                box-shadow: none;
+                opacity: 1;
+            }
+
+            #rabbitModal .modal-body {
+                padding: 30px;
+            }
+
+            #rabbitModal .modal-footer {
+                padding: 22px 30px;
+                border-top: 1px solid #eee;
+                justify-content: space-between;
+            }
+
+            /* Progress */
+
+           #rabbitModal .progress {
+                display: flex;
+                align-items: center;
+                padding: 2rem 1.5rem;
+                background: #f9fafb;
+                border-bottom: 1px solid var(--dvb-border);
+            }
+
+            #rabbitModal .progress-item {
+                display: flex;
+                align-items: center;
+                flex: 1;
+            }
+
+            #rabbitModal .circle {
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+                border: 2px solid #ddd;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 14px;
+                background: #fff;
+                color: #999;
+            }
+
+            #rabbitModal .progress-item.active .circle,
+           #rabbitModal .progress-item.done .circle {
+                background: #9B6139;
+                border-color: #9B6139;
+                color: #fff;
+            }
+
+           #rabbitModal .line {
+                flex: 1;
+                height: 2px;
+                background: #ddd;
+                margin: 0 10px;
+            }
+
+           #rabbitModal .label {
+                margin-left: 12px;
+                font-size: 12px;
+                font-weight: 600;
+                white-space: nowrap;
+                color: #555;
+            }
+
+            /* Steps */
+
+            #rabbitModal .step {
+                display: none;
+            }
+
+           #rabbitModal .step.active {
+                display: block;
+            }
+
+            #rabbitModal .heading {
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                color: #7d8799;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+
+            /* Options */
+
+            #rabbitModal .option {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 18px 20px;
+                border: 1px solid #ddd;
+                border-radius: 12px;
+                margin-bottom: 14px;
+                cursor: pointer;
+                transition: .25s;
+            }
+
+            #rabbitModal .option:hover {
+                border-color: #9B6139;
+            }
+
+            #rabbitModal .option.active {
+                background: #f8ede5;
+                border-color: #9B6139;
+            }
+
+           #rabbitModal .option-left {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+           #rabbitModal .radio {
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                border: 2px solid #ccc;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #rabbitModal .option.active .radio {
+                border-color: #9B6139;
+            }
+
+            #rabbitModal .option.active .radio::after {
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #9B6139;
+            }
+
+            /* Buttons */
+
+            #rabbitModal .prev,
+            #rabbitModal .next,
+            #rabbitModal .full-btn,
+            #rabbitModal .back-btn {
+               border: none;
+    border-radius: 10px;
+    height: auto;
+    padding: 10px 28px;
+    font-weight: 500;
+    cursor: pointer;
+            }
+
+            #rabbitModal .prev,
+            #rabbitModal .back-btn {
+                background: #fff;
+                border: 1px solid #ddd;
+            }
+
+            #rabbitModal .next,
+           #rabbitModal .full-btn {
+                background: #9B6139;
+                color: #fff;
+            }
+
+           #rabbitModal .full-btn,
+           #rabbitModal .back-btn {
+                  width: 100%;
+                    margin-bottom: 15px;
+                    font-size: 16px;
+            }
+
+            /* Search */
+
+           #rabbitModal .search-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dvb-text);
+    margin-bottom: 1rem;
+    display: block;
+    text-align: left;
+}
+
+      #rabbitModal .search-box {
+    width: 100%;
+    height: 52px;
+    padding: 0 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 30px;
+    background: transparent;
+}
+
+           #rabbitModal .or {
+                display: flex;
+                align-items: center;
+                margin: 30px 0;
+            }
+
+            #rabbitModal .or::before,
+            #rabbitModal .or::after {
+                content: "";
+                flex: 1;
+                height: 1px;
+                background: #ddd;
+            }
+
+            #rabbitModal .or span {
+                margin: 0 15px;
+                color: #999;
+                font-weight: 600;
+            }
+
+          #rabbitModal .center {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+           #rabbitModal .powered {
+                margin-top: 25px;
+                text-align: center;
+                color: #777;
+                font-size: 14px;
+            }
+
+            #rabbitModal .powered span {
+                color: #9B6139;
+            }
+
+            /* Mobile */
+
+            @media (max-width:600px) {
+
+                #rabbitModal .modal-dialog {
+                    margin: 1rem;
+                }
+
+                #rabbitModal .progress {
+                    padding: 15px;
+                }
+
+                #rabbitModal .label {
+                    display: none;
+                }
+
+                #rabbitModal .modal-body {
+                    padding: 20px;
+                }
+
+                #rabbitModal .modal-footer {
+                    padding: 20px;
+                }
+
+            }
+        </style>
+
+
+
+        <div class="modal fade" id="rabbitModal" tabindex="-1" aria-labelledby="rabbitModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <!-- Header -->
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="rabbitModalLabel">DelveBurt</h2>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+
+                    <!-- Progress -->
+                    <div class="progress">
+
+                        <div class="progress-item active" id="p1">
+                            <div class="circle">1</div>
+                            <div class="label">Who I Am</div>
+                            <div class="line"></div>
+                        </div>
+
+                        <div class="progress-item" id="p2">
+                            <div class="circle">2</div>
+                            <div class="label">What I'd Like To Do Next</div>
+                            <div class="line"></div>
+                        </div>
+
+                        <div class="progress-item" id="p3">
+                            <div class="circle">3</div>
+                            <div class="label">Results</div>
+                        </div>
+
+                    </div>
+
+                    <!-- Body -->
+                    <div class="modal-body content">
+
+                        <!-- STEP 1 -->
+                        <div class="step active">
+
+                            <div class="heading">WHO I AM</div>
+
+                            <div class="option active">
+                                <div class="option-left">👤 New Visitor</div>
+                                <div class="radio"></div>
+                            </div>
+
+                            <div class="option">
+                                <div class="option-left">🤖 AI Beginner</div>
+                                <div class="radio"></div>
+                            </div>
+
+                            <div class="option">
+                                <div class="option-left">🎯 AI Familiar</div>
+                                <div class="radio"></div>
+                            </div>
+
+                            <div class="option">
+                                <div class="option-left">⭐ Free Member</div>
+                                <div class="radio"></div>
+                            </div>
+
+                            <div class="option">
+                                <div class="option-left">💎 Premium Member</div>
+                                <div class="radio"></div>
+                            </div>
+
+                            <div class="option">
+                                <div class="option-left">🏆 Patron</div>
+                                <div class="radio"></div>
+                            </div>
+
+                        </div>
+
+                        <!-- STEP 2 -->
+                        <div class="step">
+
+                            <div class="heading">WHAT I'D LIKE TO DO NEXT</div>
+
+                            <div class="option active">
+                                <div class="option-left">💡 Improve My Thinking</div>
+                                <div class="radio"></div>
+                            </div>
+
+                            <div class="option">
+                                <div class="option-left">📖 Learn About AI</div>
+                                <div class="radio"></div>
+                            </div>
+
+                            <div class="option">
+                                <div class="option-left">📚 Browse Content</div>
+                                <div class="radio"></div>
+                            </div>
+
+                            <div class="option">
+                                <div class="option-left">👑 Become a Member</div>
+                                <div class="radio"></div>
+                            </div>
+
+                            <div class="option">
+                                <div class="option-left">❤️ Support DelveBlog</div>
+                                <div class="radio"></div>
+                            </div>
+
+                        </div>
+
+                        <!-- STEP 3 -->
+                        <div class="step">
+
+                            <div class="search-title">
+                                Know exactly what you're looking for?
+                            </div>
+
+                            <input class="search-box" placeholder="Search DelveBlog...">
+
+                            <div class="or">
+                                <span>OR</span>
+                            </div>
+
+                            <div class="center">
+                                Continue with DelveBurt
+                            </div>
+
+                            <button class="full-btn">
+                                DELVE
+                            </button>
+
+                            <button class="back-btn">
+                                Back
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="modal-footer buttons">
+
+                        <button type="button" class="prev">
+                            Back
+                        </button>
+
+                        <button type="button" class="next">
+                            Next →
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <script src="js/jquery.js"></script>
+        <script>
+            jQuery(function ($) {
+
+                var current = 0;
+
+                function updateSteps() {
+
+                    // Show current step
+                    $('.step').removeClass('active');
+                    $('.step').eq(current).addClass('active');
+
+                    // Update progress
+                    $('.progress-item').removeClass('active done');
+
+                    $('.progress-item').each(function (index) {
+
+                        if (index < current) {
+                            $(this).addClass('done');
+                        } else if (index == current) {
+                            $(this).addClass('active');
+                        }
+
+                    });
+
+                    // Previous button
+                    if (current === 0) {
+                        $('.prev').css('visibility', 'hidden');
+                    } else {
+                        $('.prev').css('visibility', 'visible');
+                    }
+
+                    // Footer buttons
+                    if (current === 2) {
+                        $('.modal-footer').hide();
+                    } else {
+                        $('.modal-footer').show();
+                    }
+
+                }
+
+                updateSteps();
+
+                // Reset every time the Bootstrap modal opens
+                $('#rabbitModal').on('shown.bs.modal', function () {
+
+                    current = 0;
+                    updateSteps();
+
+                });
+
+                // Next
+                $('.next').on('click', function () {
+
+                    if (current < 2) {
+                        current++;
+                        updateSteps();
+                    }
+
+                });
+
+                // Previous
+                $('.prev').on('click', function () {
+
+                    if (current > 0) {
+                        current--;
+                        updateSteps();
+                    }
+
+                });
+
+                // Step 3 Back
+                $('.back-btn').on('click', function () {
+
+                    current = 1;
+                    updateSteps();
+
+                });
+
+                // Option selection
+                $('.option').on('click', function () {
+
+                    $(this)
+                        .siblings('.option')
+                        .removeClass('active');
+
+                    $(this).addClass('active');
+
+                });
+
+            });
+
+        </script>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/swiper.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+        <script src="js/custom.js"></script>
+</body>
+
+</html>
