@@ -1101,4 +1101,8 @@
         height: 30px;
     }
 
+    .list-flex {
+        grid-template-columns: 100%;
+    }
+
 }
