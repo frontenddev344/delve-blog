@@ -60,6 +60,7 @@
     font-display: swap;
 }
 
+
 body {
     background: #fff;
     font-family: "Funnel Display", sans-serif;
@@ -5287,9 +5288,10 @@ exploration-sec .minutes-box h3 {
 
 
 .marketing-integirty .hero {
-    margin: 0 auto;
+    margin: 0 auto 60px;
     padding: 40px 0;
     text-align: center;
+    background: #fbf5e7;
 }
 
 .marketing-integirty .hero-eyebrow {
