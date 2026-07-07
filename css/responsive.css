@@ -1105,4 +1105,8 @@
         grid-template-columns: 100%;
     }
 
+    .marketing-feedback-card {
+        padding: 45px 20px;
+    }
+
 }
