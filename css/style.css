@@ -5338,7 +5338,7 @@ exploration-sec .minutes-box h3 {
     background-position: center;
     padding: 300px 80px;
     font-family: var(--font-clo);
-    font-size: clamp(40px,5.5vw,120px);
+    font-size: clamp(40px,5.5vw,100px);
     color: #1f1202;
     line-height: 1;
     width: 100%;
@@ -5346,6 +5346,8 @@ exploration-sec .minutes-box h3 {
     font-weight: 500;
     margin-top: -180px;
     margin-bottom: -180px;
+    width: calc(100% + 120px);
+    margin-left: -60px;
 }
 
 .dec-line img {

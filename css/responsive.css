@@ -1,3 +1,10 @@
+@media screen and (max-width:1400px){
+.decorative-heading h4 {
+    width:100%;
+    margin-left:0;
+}
+}
+
 @media screen and (max-width:1200px) {
     .site-banner-warp .grid {
         grid-template-columns: 1fr 1fr;
