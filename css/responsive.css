@@ -1095,6 +1095,7 @@
         margin-top: -50px;
         margin-bottom: -50px;
         font-size: 32px;
+        letter-spacing: -2px;
     }
 
     .dec-line img {
@@ -1107,6 +1108,10 @@
 
     .marketing-feedback-card {
         padding: 45px 20px;
+    }
+
+    .marketing-integirty .hero {
+        margin: 0 auto 40px;
     }
 
 }
