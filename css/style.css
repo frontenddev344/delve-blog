@@ -1640,7 +1640,7 @@ body.about-page {
 
 .newsletter-form input {
     width: 100%;
-    max-width: 256px;
+    /* max-width: 256px; */
     height: 44px;
     border: none;
     padding: 0 20px;
