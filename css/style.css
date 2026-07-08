@@ -1632,6 +1632,10 @@ body.about-page {
     gap: 15px;
     padding: 15px;
     background: #faf8f3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .newsletter-form input {
@@ -1647,6 +1651,14 @@ body.about-page {
 
 .newsletter-form .tnp-field {
     width: 100%;
+}
+
+.newsletter-form .tnp-field.tnp-field-email {
+    grid-column: 1/-1;
+}
+
+.newsletter-form .tnp-field.tnp-field-button {
+    grid-column: 1/-1;
 }
 
 .newsletter-form input::placeholder {
