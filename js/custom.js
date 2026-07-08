@@ -221,6 +221,14 @@ $(document).ready(function () {
 
     const audio = $("#musicPlayer")[0];
 
+    const progressCircle = document.querySelector(".progress-circle");
+
+const radius = 48;
+const circumference = 2 * Math.PI * radius;
+
+progressCircle.style.strokeDasharray = circumference;
+progressCircle.style.strokeDashoffset = circumference;
+
     if (!audio || $("#playMusic").length === 0) return;
 
     const FADE_TIME = 2;
@@ -245,37 +253,45 @@ $(document).ready(function () {
             .addClass("ri-pause-fill");
     });
 
-    $(audio).on("timeupdate", function () {
+   $(audio).on("timeupdate", function () {
 
-        if (!audio.duration) return;
+    if (!audio.duration) return;
 
-        const remaining = audio.duration - audio.currentTime;
+    // Progress Ring
+    const percent = audio.currentTime / audio.duration;
+    const offset = circumference - percent * circumference;
+    progressCircle.style.strokeDashoffset = offset;
 
-        if (remaining <= FADE_TIME) {
-            audio.volume = Math.max(remaining / FADE_TIME, 0);
-        } else {
-            audio.volume = 1;
-        }
+    // Fade out
+    const remaining = audio.duration - audio.currentTime;
 
-    });
-
-    $(audio).on("ended", function () {
-
+    if (remaining <= FADE_TIME) {
+        audio.volume = Math.max(remaining / FADE_TIME, 0);
+    } else {
         audio.volume = 1;
+    }
 
-        $(".play-btn i")
-            .removeClass("ri-pause-fill")
-            .addClass("ri-play-fill");
+});
 
-    });
+  $(audio).on("ended", function () {
 
-    $(audio).on("pause", function () {
+    audio.volume = 1;
 
-        $(".play-btn i")
-            .removeClass("ri-pause-fill")
-            .addClass("ri-play-fill");
+    progressCircle.style.strokeDashoffset = circumference;
 
-    });
+    $(".play-btn i")
+        .removeClass("ri-pause-fill")
+        .addClass("ri-play-fill");
+
+});
+
+$(audio).on("pause", function () {
+
+    $(".play-btn i")
+        .removeClass("ri-pause-fill")
+        .addClass("ri-play-fill");
+
+});
 
     $(audio).on("play", function () {
 

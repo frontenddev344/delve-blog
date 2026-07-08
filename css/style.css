@@ -1731,9 +1731,6 @@ body.about-page {
 
 }
 
-.music-thumbnail:hover .music-overlay{
-    background:rgba(0,0,0,.55);
-}
 
 .play-btn {
     width: 95px;
@@ -1743,9 +1740,16 @@ body.about-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-    font-size: 30px;
-    color: var(--brown);
+    font-size: 40px;
+    color: var(--theme-clr);
+    position: relative;
+    z-index: 2;
+    transition: all 0.2s linear;
+}
+
+.play-btn:hover {
+    background: var(--theme-clr);
+    color: #fff;
 }
 
 .play-btn svg{
@@ -1753,6 +1757,38 @@ body.about-page {
     fill:#8d5a33;
 
 }
+
+.play-wrapper{
+    position:relative;
+    width:110px;
+    height:110px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.progress-ring{
+    position:absolute;
+    inset:0;
+    transform:rotate(-90deg);
+}
+
+.progress-bg{
+    fill:none;
+    stroke:rgba(255,255,255,.25);
+    stroke-width:4;
+}
+
+.progress-circle{
+    fill:none;
+    stroke:#ffffff;
+    stroke-width:4;
+    stroke-linecap:round;
+    stroke-dasharray:301.59;
+    stroke-dashoffset:301.59;
+    transition: all .2s linear;
+}
+
 
 .music-overlay span{
     color:#fff;
@@ -5045,7 +5081,7 @@ exploration-sec .minutes-box h3 {
 
 .what-we-belive .section-title {
     font-family: var(--font-bri);
-    font-size: clamp(24px, 4vw, 42px);
+    font-size: clamp(32px, 6vw, 48px);
     margin-bottom: 40px;
 }
 
@@ -5239,8 +5275,8 @@ exploration-sec .minutes-box h3 {
 
 .temperament-section .section-title {
     font-family: var(--font-bri);
-    font-size: clamp(24px, 4vw, 42px);
     margin-bottom: 40px;
+    font-size: clamp(32px, 6vw, 48px);
 }
 
 .temp-grid {
@@ -5287,7 +5323,7 @@ exploration-sec .minutes-box h3 {
 
 .invitation-section h2 {
     font-family: var(--font-bri);
-    font-size: clamp(24px, 4vw, 42px);
+    font-size: clamp(32px, 6vw, 48px);
     margin-bottom: 40px;
     font-weight: 700;
 }
