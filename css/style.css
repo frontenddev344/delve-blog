@@ -1673,12 +1673,12 @@ body.about-page {
     font-size: 14px;
     letter-spacing: 0.28px;
     font-weight: 500;
-    color: #111827;
+    color: #fff;
     padding: 12px 32px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    background: linear-gradient(to left, #ffffff 50%, var(--theme-clr, #111827) 50%);
+    background: linear-gradient(to left, var(--theme-clr) 50%,  #111827 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     transition: background-position 0.4s ease-in-out, color 0.3s ease;
