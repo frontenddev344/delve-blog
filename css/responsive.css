@@ -459,12 +459,17 @@
     .manifesto-main .pull-quote blockquote {
         font-size: 18px;
     }
+
+    .music-card {
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+    .music-content {
+        padding: 40px;
+    }
 }
 
 @media screen and (max-width:768px){
-    /* .site-banner-warp .grid .item:nth-child(2) {
-        grid-area: 1;
-    } */
 
        .rabbit-card {
         margin-left: auto;
@@ -853,6 +858,27 @@
     .marketing-feedback-section {
         margin-top: 40px;
     }
+
+    .music-content {
+        padding: 30px;
+    }
+
+    .music-content h3 {
+        font-size: 32px;
+        margin-bottom: 0;
+    }
+
+    .play-btn {
+        width: 65px;
+        height: 65px;
+        font-size: 24px;
+    }
+
+    .music-director-section {
+        padding: 40px 0 0;
+    }
+   
+
 }
 
 @media screen and (max-width:575px){
@@ -1114,4 +1140,19 @@
         margin: 0 auto 40px;
     }
 
+     .music-card {
+        grid-template-columns: 100%;
+    }
+
+    .music-content {
+        padding: 20px;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .music-content h3 {
+        font-size: 28px;
+    }
 }

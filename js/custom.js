@@ -16,38 +16,43 @@ $(document).ready(function(){
  AOS.init();
 
 
-gsap.registerPlugin(ScrollTrigger);
+function elementExists(selector) {
+    return document.querySelector(selector) !== null;
+}
 
-gsap.from(".solution-content", {
-  y: 100,
-  opacity: 0.5,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".solution-content",
-    start: "top 85%",
-    end: "top 40%",
-    scrub: true,
-    // markers: true
-  }
-});
+if (elementExists(".solution-content")) {
+    gsap.from(".solution-content", {
+        y: 100,
+        opacity: 0.5,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".solution-content",
+            start: "top 85%",
+            end: "top 40%",
+            scrub: true
+        }
+    });
+}
 
-
-gsap.from(".mind-img img", {
-  scale: 0,
-  opacity: 0,
-  duration: 1.5,
-  ease: "power2.out",
-  scrollTrigger: {
-    trigger: ".mind-img",
-    start: "top 80%",
-    end: "top 30%",
-    scrub: true,
-    // markers: true
-  }
-});
+if (elementExists(".mind-img img")) {
+    gsap.from(".mind-img img", {
+        scale: 0,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".mind-img",
+            start: "top 80%",
+            end: "top 30%",
+            scrub: true
+        }
+    });
+}
 
 
 // devle navigation popup start 
+
+if (document.getElementById("dvbModal")) {
 
 (function () {
   const WHO = [
@@ -208,4 +213,76 @@ gsap.from(".mind-img img", {
     render(1);
   });
 })();
+
+}
 // devle navigation popup end 
+
+$(document).ready(function () {
+
+    const audio = $("#musicPlayer")[0];
+
+    if (!audio || $("#playMusic").length === 0) return;
+
+    const FADE_TIME = 2;
+
+    $("#playMusic").on("click", function () {
+
+        // If already playing -> Pause
+        if (!audio.paused) {
+            audio.pause();
+            $(".play-btn i")
+                .removeClass("ri-pause-fill")
+                .addClass("ri-play-fill");
+            return;
+        }
+
+        // Otherwise play
+        audio.volume = 1;
+        audio.play();
+
+        $(".play-btn i")
+            .removeClass("ri-play-fill")
+            .addClass("ri-pause-fill");
+    });
+
+    $(audio).on("timeupdate", function () {
+
+        if (!audio.duration) return;
+
+        const remaining = audio.duration - audio.currentTime;
+
+        if (remaining <= FADE_TIME) {
+            audio.volume = Math.max(remaining / FADE_TIME, 0);
+        } else {
+            audio.volume = 1;
+        }
+
+    });
+
+    $(audio).on("ended", function () {
+
+        audio.volume = 1;
+
+        $(".play-btn i")
+            .removeClass("ri-pause-fill")
+            .addClass("ri-play-fill");
+
+    });
+
+    $(audio).on("pause", function () {
+
+        $(".play-btn i")
+            .removeClass("ri-pause-fill")
+            .addClass("ri-play-fill");
+
+    });
+
+    $(audio).on("play", function () {
+
+        $(".play-btn i")
+            .removeClass("ri-play-fill")
+            .addClass("ri-pause-fill");
+
+    });
+
+});
