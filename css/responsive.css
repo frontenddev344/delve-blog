@@ -235,12 +235,12 @@
     }
 
     .newsletter-form {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
     }
 
     .newsletter-form input {
         width: 100%;
+        max-width: 100%;
     }
     .core-values {
         padding: 60px 0;

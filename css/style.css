@@ -1630,6 +1630,8 @@ body.about-page {
     display: flex;
     justify-content: center;
     gap: 15px;
+    padding: 15px;
+    background: #faf8f3;
 }
 
 .newsletter-form input {
@@ -1639,8 +1641,39 @@ body.about-page {
     border: none;
     padding: 0 20px;
     font-size: 16px;
-    background: #F2E9DF;
+    background: #e7dfd4;
     font-family: var(--font-bri);
+}
+
+.newsletter-form .tnp-field {
+    width: 100%;
+}
+
+.newsletter-form input::placeholder {
+    color: #00000073;
+}
+
+.newsletter-form input[type="submit"] {
+    border: none;
+    line-height: 1;
+    font-size: 14px;
+    letter-spacing: 0.28px;
+    font-weight: 500;
+    color: #111827;
+    padding: 12px 32px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    background: linear-gradient(to left, #ffffff 50%, var(--theme-clr, #111827) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.4s ease-in-out, color 0.3s ease;
+}
+
+.newsletter-form input[type="submit"]:hover{
+    color: #ffffff;
+    background-position: left bottom;
+    /* background: linear-gradient(to left, #111827 50%, var(--theme-clr, #ffffff) 50%); */
 }
 
 .newsletter-form button {
