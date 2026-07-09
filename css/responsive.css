@@ -467,6 +467,9 @@
     .music-content {
         padding: 40px;
     }
+    .music-thumbnail img {
+        min-height: auto;
+    }
 }
 
 @media screen and (max-width:768px){
