@@ -5326,7 +5326,7 @@ exploration-sec .minutes-box h3 {
 .conversation-section {
     padding: 70px 0;
     background: var(--cream);
-    display: none;
+    /* display: none; */
 }
 
 .conversation-inner {
@@ -5444,7 +5444,6 @@ exploration-sec .minutes-box h3 {
 .invitation-section {
     padding: 70px 0;
     background: var(--cream);
-    display: none;
 }
 
 .invitation-section h2 {
