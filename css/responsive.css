@@ -1155,4 +1155,18 @@
     .music-content h3 {
         font-size: 28px;
     }
+
+    .music-director-section .decorative-text {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .music-director-section .decorative-text span::before {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 0;
+    }
+    .music-director-section .section-heading span:nth-of-type(2)::before {
+        left: 50%;
+    }
 }

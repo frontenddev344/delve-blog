@@ -1600,6 +1600,7 @@ body.about-page {
 .newsletter-section {
     background: #07152f;
     padding: 100px 0;
+    display: none;
 }
 
 .newsletter-content {
@@ -1747,8 +1748,11 @@ body.about-page {
     border-radius: 20px;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1.5fr;
     box-shadow: 0 18px 60px rgba(0,0,0,.08);
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .music-thumbnail{
@@ -1837,10 +1841,22 @@ body.about-page {
 }
 
 
-.music-overlay span{
-    color:#fff;
-    font-size:18px;
-    font-weight:600;
+.music-overlay span {
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    background: #fff;
+    padding: 6px 20px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.music-overlay span i {
+    color: var(--theme-clr);
 }
 
 .music-content {
@@ -1849,6 +1865,14 @@ body.about-page {
     flex-direction: column;
     justify-content: center;
     align-items: start;
+}
+
+.music-content hr {
+    opacity: 1;
+    border-color: var(--theme-clr);
+    display: block;
+    width: 100%;
+    margin: 10px 0 20px;
 }
 
 .music-content h3{
@@ -1866,6 +1890,50 @@ body.about-page {
 .music-director-section .music-content p {
     text-align: left;
     margin: 0 0 8px;
+}
+
+.music-director-section .section-heading p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.music-director-section .decorative-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto 0;
+}
+
+.music-director-section .decorative-text span {
+    background: var(--theme-clr);
+    width: 100px;
+    height: 1px;
+    flex-grow: 1;
+    position: relative;
+}
+
+.music-director-section .decorative-text span::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: var(--theme-clr);
+    position: absolute;
+    border-radius: 100%;
+    left: 0;
+    top: -4px;
+}
+
+.music-director-section .section-heading span:nth-of-type(2)::before {
+    left: auto;
+    right: 0;
+}
+
+.music-director-section .section-heading span.badge {
+    background: var(--theme-clr);
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 
 .music-content p{
@@ -4960,7 +5028,7 @@ exploration-sec .minutes-box h3 {
     color: var(--theme-clr);
     font-weight: 800;
     margin-bottom: 18px;
-    margin-top: 18px;
+    margin-top: 0;
 }
 
 .manifesto-main .hero h1 {
@@ -5191,10 +5259,11 @@ exploration-sec .minutes-box h3 {
 }
 
 .manifesto-main .human-ai-content h2 {
-    font-size: 32px;
     font-weight: 900;
-    margin-bottom: 16px;
     color: var(--light-text);
+    font-family: var(--font-bri);
+    font-size: clamp(32px, 6vw, 48px);
+    margin-bottom: 20px;
 }
 
 .manifesto-main .human-ai-content>p {
@@ -5250,6 +5319,7 @@ exploration-sec .minutes-box h3 {
 .conversation-section {
     padding: 70px 0;
     background: var(--cream);
+    display: none;
 }
 
 .conversation-inner {
@@ -5367,6 +5437,7 @@ exploration-sec .minutes-box h3 {
 .invitation-section {
     padding: 70px 0;
     background: var(--cream);
+    display: none;
 }
 
 .invitation-section h2 {

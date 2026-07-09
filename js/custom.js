@@ -216,88 +216,128 @@ if (document.getElementById("dvbModal")) {
 
 }
 // devle navigation popup end 
-
 $(document).ready(function () {
 
     const audio = $("#musicPlayer")[0];
-
     const progressCircle = document.querySelector(".progress-circle");
 
-const radius = 48;
-const circumference = 2 * Math.PI * radius;
+    const radius = 48;
+    const circumference = 2 * Math.PI * radius;
 
-progressCircle.style.strokeDasharray = circumference;
-progressCircle.style.strokeDashoffset = circumference;
+    if (!audio || $("#playMusic").length === 0 || !progressCircle) return;
 
-    if (!audio || $("#playMusic").length === 0) return;
+    progressCircle.style.strokeDasharray = circumference;
+    progressCircle.style.strokeDashoffset = circumference;
 
     const FADE_TIME = 2;
 
-    $("#playMusic").on("click", function () {
+    // ----------------------------
+    // Helper Function
+    // ----------------------------
+    function updatePlayerUI(isPlaying) {
 
-        // If already playing -> Pause
-        if (!audio.paused) {
-            audio.pause();
+        if (isPlaying) {
+
+            $(".play-btn i")
+                .removeClass("ri-play-fill")
+                .addClass("ri-pause-fill");
+
+            $(".play-label").html(`
+                <i class="ri-pause-fill"></i>
+                Pause Audio
+            `);
+
+        } else {
+
             $(".play-btn i")
                 .removeClass("ri-pause-fill")
                 .addClass("ri-play-fill");
-            return;
+
+            $(".play-label").html(`
+                <i class="ri-play-fill"></i>
+                Listen to DelveBlog
+            `);
+
         }
 
-        // Otherwise play
-        audio.volume = 1;
-        audio.play();
-
-        $(".play-btn i")
-            .removeClass("ri-play-fill")
-            .addClass("ri-pause-fill");
-    });
-
-   $(audio).on("timeupdate", function () {
-
-    if (!audio.duration) return;
-
-    // Progress Ring
-    const percent = audio.currentTime / audio.duration;
-    const offset = circumference - percent * circumference;
-    progressCircle.style.strokeDashoffset = offset;
-
-    // Fade out
-    const remaining = audio.duration - audio.currentTime;
-
-    if (remaining <= FADE_TIME) {
-        audio.volume = Math.max(remaining / FADE_TIME, 0);
-    } else {
-        audio.volume = 1;
     }
 
-});
+    // Initial State
+    updatePlayerUI(false);
 
-  $(audio).on("ended", function () {
+    // ----------------------------
+    // Click Event
+    // ----------------------------
+    $("#playMusic").on("click", function () {
 
-    audio.volume = 1;
+        if (audio.paused) {
 
-    progressCircle.style.strokeDashoffset = circumference;
+            audio.volume = 1;
+            audio.play();
 
-    $(".play-btn i")
-        .removeClass("ri-pause-fill")
-        .addClass("ri-play-fill");
+        } else {
 
-});
+            audio.pause();
 
-$(audio).on("pause", function () {
+        }
 
-    $(".play-btn i")
-        .removeClass("ri-pause-fill")
-        .addClass("ri-play-fill");
+    });
 
-});
-
+    // ----------------------------
+    // Play Event
+    // ----------------------------
     $(audio).on("play", function () {
 
-        $(".play-btn i")
-            .removeClass("ri-play-fill")
-            .addClass("ri-pause-fill");
+        updatePlayerUI(true);
+
+    });
+
+    // ----------------------------
+    // Pause Event
+    // ----------------------------
+    $(audio).on("pause", function () {
+
+        updatePlayerUI(false);
+
+    });
+
+    // ----------------------------
+    // Time Update
+    // ----------------------------
+    $(audio).on("timeupdate", function () {
+
+        if (!audio.duration) return;
+
+        const percent = audio.currentTime / audio.duration;
+        const offset = circumference - (percent * circumference);
+
+        progressCircle.style.strokeDashoffset = offset;
+
+        const remaining = audio.duration - audio.currentTime;
+
+        if (remaining <= FADE_TIME) {
+
+            audio.volume = Math.max(remaining / FADE_TIME, 0);
+
+        } else {
+
+            audio.volume = 1;
+
+        }
+
+    });
+
+    // ----------------------------
+    // End Event
+    // ----------------------------
+    $(audio).on("ended", function () {
+
+        audio.currentTime = 0;
+        audio.volume = 1;
+
+        progressCircle.style.strokeDashoffset = circumference;
+
+        updatePlayerUI(false);
 
     });
 
