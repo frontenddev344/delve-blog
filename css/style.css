@@ -1600,7 +1600,7 @@ body.about-page {
 .newsletter-section {
     background: #07152f;
     padding: 100px 0;
-    display: none;
+    /* display: none; */
 }
 
 .newsletter-content {
@@ -1787,6 +1787,7 @@ body.about-page {
     font-weight: 300;
     font-style: italic;
     margin-top: 10px;
+    color: #000000ad;
 }
 
 .play-btn {
@@ -5034,7 +5035,7 @@ exploration-sec .minutes-box h3 {
     color: var(--theme-clr);
     font-weight: 800;
     margin-bottom: 18px;
-    margin-top: 0;
+    margin-top: 20px;
 }
 
 .manifesto-main .hero h1 {
